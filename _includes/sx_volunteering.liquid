@@ -1,0 +1,27 @@
+{% comment %}
+  Service and volunteering cards (site-specific include, not part of al-folio).
+  Data: _data/volunteering.yml. Used on the home page and on /service/.
+{% endcomment %}
+<div class="sx-volunteer">
+  {% for v in site.data.volunteering %}
+    <article class="sx-vol">
+      <div class="sx-vol-icon" aria-hidden="true"><i class="{{ v.icon | default: 'fa-solid fa-hands-helping' }}"></i></div>
+      <div class="sx-vol-body">
+        <span class="sx-award-date">{{ v.period }}{% if v.category %} · {{ v.category }}{% endif %}</span>
+        <h3 class="sx-award-title">{{ v.role }}</h3>
+        <p class="sx-award-org">{{ v.org }}</p>
+        {% if v.summary %}<p class="sx-award-text">{{ v.summary }}</p>{% endif %}
+        {% if v.items %}
+          <ul class="sx-vol-items">
+            {% for item in v.items %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+        {% if v.links %}
+          <p class="sx-award-links">
+            {% for l in v.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+          </p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

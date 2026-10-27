@@ -419,6 +419,44 @@ html[data-theme="dark"] {
   font-size: 0.85rem;
 }
 
+/* ---------- service and volunteering ---------- */
+.sx-volunteer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.1rem;
+}
+.sx-vol {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--sx-line);
+  border-radius: var(--sx-radius);
+  background: var(--global-card-bg-color);
+}
+.sx-vol:first-child {
+  grid-row: span 3;
+}
+.sx-vol-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sx-soft);
+  color: var(--sx-accent);
+  font-size: 1.4rem;
+}
+.sx-vol-items {
+  font-size: 0.86rem;
+  padding-left: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+.sx-vol-items li {
+  margin-bottom: 0.15rem;
+}
+
 /* ---------- timeline ---------- */
 .sx-two-col {
   display: grid;
@@ -594,6 +632,37 @@ html[data-theme="dark"] {
 }
 .sx-contact .contact-icons {
   font-size: 2.2rem;
+}
+
+/* ---------- navbar: fold into the menu button below 992px ----------
+   With ten section tabs the row no longer fits on tablets, so between the
+   theme's 576px breakpoint and 992px we use the phone-style collapsed menu. */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #navbar.navbar-expand-sm .navbar-toggler {
+    display: block !important;
+  }
+  #navbar.navbar-expand-sm .navbar-collapse {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+  /* The theme forces display:flex !important inside a cascade layer, which an
+     unlayered rule cannot override, so the closed menu is hidden by height. */
+  #navbar.navbar-expand-sm .navbar-collapse:not(.show) {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  #navbar.navbar-expand-sm .navbar-collapse.show {
+    height: auto;
+    visibility: visible;
+  }
+  #navbar:has(.navbar-collapse.show) {
+    background: var(--global-bg-color);
+  }
+  #navbar.navbar-expand-sm .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-end;
+  }
 }
 
 /* ---------- navbar: section highlight (home page) ---------- */

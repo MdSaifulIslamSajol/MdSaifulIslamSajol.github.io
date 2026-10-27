@@ -3,9 +3,11 @@
   Change: navbar pages that set `nav_section` in their front matter link to that
   section of the single-page home (for example /#publications) instead of their
   own page, and carry data-section so assets/custom/sections.js can highlight
-  the section currently in view and scroll to it smoothly.
+  the section currently in view and scroll to it smoothly. It also loads
+  assets/custom/sections.css on every page (used for the tablet navbar).
 {% endcomment %}
 <header>
+  <link rel="stylesheet" href="{{ '/assets/custom/sections.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">

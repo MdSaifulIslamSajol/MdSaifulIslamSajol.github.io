@@ -169,12 +169,6 @@ layout: default
           {% endfor %}
         </ol>
 
-        <h3 class="sx-subhead">Service</h3>
-        <p class="sx-small">
-          Reviewer for Knowledge-Based Systems, Computer Methods and Programs in Biomedicine, Expert Systems with Applications, IEEE
-          Transactions on Artificial Intelligence, FLAIRS-39, and IEEE GIEST, KPEC, TPEC, and GPECOM. I also help mentor undergraduate
-          students on AI research projects.
-        </p>
 
         <h3 class="sx-subhead">Skills</h3>
         <div class="sx-chips sx-chips-compact">
@@ -274,11 +268,22 @@ layout: default
     </div>
   </section>
 
+  <!-- ============================== SERVICE & VOLUNTEERING ============================== -->
+  {% if site.data.volunteering %}
+    <section id="service" class="sx-section" aria-labelledby="service-title">
+      <header class="sx-section-head">
+        <h2 id="service-title" class="sx-title"><span class="sx-num">06</span> Service and Volunteering</h2>
+        <a class="sx-more" href="{{ '/service/' | relative_url }}">service page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      {% include sx_volunteering.liquid %}
+    </section>
+  {% endif %}
+
   <!-- ============================== MOMENTS (PHOTOS) ============================== -->
   {% if site.data.gallery %}
     <section id="moments" class="sx-section" aria-labelledby="moments-title">
       <header class="sx-section-head">
-        <h2 id="moments-title" class="sx-title"><span class="sx-num">06</span> Moments</h2>
+        <h2 id="moments-title" class="sx-title"><span class="sx-num">07</span> Moments</h2>
       </header>
       <div class="sx-gallery">
         {% for photo in site.data.gallery %}
@@ -295,7 +300,7 @@ layout: default
   {% if page.latest_posts and page.latest_posts.enabled %}
     <section id="blog" class="sx-section" aria-labelledby="blog-title">
       <header class="sx-section-head">
-        <h2 id="blog-title" class="sx-title"><span class="sx-num">07</span> Blog</h2>
+        <h2 id="blog-title" class="sx-title"><span class="sx-num">08</span> Blog</h2>
         <a class="sx-more" href="{{ '/blog/' | relative_url }}">all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </header>
       <div class="sx-posts">
@@ -323,7 +328,7 @@ layout: default
   <!-- ============================== CONTACT ============================== -->
   <section id="contact" class="sx-section sx-contact" aria-labelledby="contact-title">
     <header class="sx-section-head">
-      <h2 id="contact-title" class="sx-title"><span class="sx-num">08</span> Contact</h2>
+      <h2 id="contact-title" class="sx-title"><span class="sx-num">09</span> Contact</h2>
     </header>
     <p class="sx-lead">{{ site.contact_note }}</p>
     <div class="sx-contact-grid">
@@ -343,6 +348,12 @@ layout: default
         <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
         <span><strong>LinkedIn</strong>Md Saiful Islam Sajol</span>
       </a>
+      {% if site.data.socials.orcid_id %}
+        <a class="sx-contact-card" href="https://orcid.org/{{ site.data.socials.orcid_id }}">
+          <i class="ai ai-orcid" aria-hidden="true"></i>
+          <span><strong>ORCID</strong>{{ site.data.socials.orcid_id }}</span>
+        </a>
+      {% endif %}
     </div>
     {% if page.social %}
       <div class="social">

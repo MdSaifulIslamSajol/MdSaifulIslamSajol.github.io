@@ -1,0 +1,53 @@
+# Service and volunteering, shown on the home page and on /service/.
+# Source: Saiful's LinkedIn volunteering entries (October 2026).
+- role: Peer Reviewer
+  org: IEEE, Elsevier, and other international journals and conferences
+  period: 2023 – Present
+  category: Education
+  icon: fa-solid fa-magnifying-glass
+  summary: Peer review for journals and conferences in artificial intelligence, machine learning, biomedicine, remote sensing, and power and energy systems.
+  items:
+    - Knowledge-Based Systems (3 papers)
+    - Computer Methods and Programs in Biomedicine (1 paper)
+    - Expert Systems with Applications (2 papers)
+    - Remote Sensing Letters (1 paper)
+    - Computational and Structural Biotechnology Journal (1 paper)
+    - IEEE Transactions on Artificial Intelligence, 2024 (1 paper)
+    - FLAIRS-39, Florida Online Journals (4 papers)
+    - IEEE International Conference on Green Industrial Electronics and Sustainable Technologies (GIEST), 2024 (2 papers)
+    - IEEE Kansas Power and Energy Conference (KPEC), 2024 (2 papers)
+    - IEEE Texas Power and Energy Conference (TPEC), 2024 (3 papers)
+    - IEEE 7th Global Power, Energy and Communication Conference (GPECOM), 2025 (1 paper)
+  links:
+    - { label: ORCID, url: "https://orcid.org/0009-0000-6880-6471" }
+
+- role: Vice President
+  org: Bangladeshi Students' Association (BSA) at LSU
+  period: Jun 2024 – Jun 2025
+  category: Social services
+  icon: fa-solid fa-people-group
+  summary: >
+    Served as an aide to the president and carried out the president's duties in their absence. Supervised the other
+    BSA officers on the committee in planning and organizing events.
+  links:
+    - { label: BSA at LSU, url: "https://bsalsu.wordpress.com/" }
+
+- role: Public Relations Coordinator
+  org: Bangladeshi Students' Association (BSA) at LSU
+  period: Jun 2022 – Jun 2024
+  category: Social services
+  icon: fa-solid fa-bullhorn
+  summary: >
+    Promoted BSA among undergraduate students and other student organizations and encouraged them to take part in BSA
+    events. Explored new on-campus activities and helped the executive committee carry out events.
+  links:
+    - { label: BSA at LSU, url: "https://bsalsu.wordpress.com/" }
+
+- role: Volunteer Blood Donor
+  org: BADHAN, a voluntary blood donors' organization
+  period: Feb 2012 – Present
+  category: Social services
+  icon: fa-solid fa-hand-holding-heart
+  summary: >
+    Part of a social movement to build a healthier society by motivating voluntary blood donation, donating blood
+    voluntarily, and supporting related services and awareness programs.
