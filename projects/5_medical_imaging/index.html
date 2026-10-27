@@ -21,7 +21,7 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://mdsaifulislamsajol.github.io/projects/5_medical_imaging/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md Saiful Islam</span> Sajol </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item " data-section="about"> <a class="nav-link" href="/#about" data-section="about">about </a> </li> <li class="nav-item " data-section="news"> <a class="nav-link" href="/#news" data-section="news">news </a> </li> <li class="nav-item active" data-section="projects"> <a class="nav-link" href="/#projects" data-section="projects">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item " data-section="publications"> <a class="nav-link" href="/#publications" data-section="publications">publications </a> </li> <li class="nav-item " data-section="awards"> <a class="nav-link" href="/#awards" data-section="awards">awards </a> </li> <li class="nav-item " data-section="experience"> <a class="nav-link" href="/#experience" data-section="experience">CV </a> </li> <li class="nav-item " data-section="blog"> <a class="nav-link" href="/#blog" data-section="blog">blog </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Medical Image Classification Benchmarks</h1> <p class="post-description">CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).</p> </header> <article> <ul> <li> <strong>Brain tumor MRI (IEEE IS 2024):</strong> compared seven transformer-based or self-attention-based models with five conventional CNNs on four datasets using direct transfer learning. Transformer-based models did not show a distinct advantage; ResNet-50 performed well overall, especially on smaller datasets. <a href="https://github.com/MdSaifulIslamSajol/brain-tumor-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Skin lesions (IEEE EECSI 2024):</strong> compared CNN, transformer, and hybrid models on HAM10000 (10,015 dermatoscopic images). ConvNeXt V2 was the most accurate CNN (93.2%), ViT2 the most accurate transformer (92.66%), and CvT the best hybrid (92.20%). <a href="https://github.com/MdSaifulIslamSajol/skin-cancer-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Chest X-rays (ICAIIC 2025):</strong> a taxonomy of CNN, transformer, and hybrid classifiers evaluated for pneumonia detection. SwinV2 gave the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%) but slower inference (133.58 ms). <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Document images (IEEE CITDS 2024):</strong> ConvNeXt V2 for document image classification on Tobacco-3482 (92.25% accuracy). <a href="https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2" rel="external nofollow noopener" target="_blank">Code</a> </li> </ul> <p><strong>Publications:</strong> <a class="citation" href="#sajol2024braintumor">(Sajol &amp; Hasan, 2024; Sajol et al., 2024; Sajol et al., 2025; Sajol et al., 2024)</a></p> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2025</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>ICAIIC</div> </abbr> </div> <div id="sajol2025pneumonia" class="col-sm-8"> <div class="title">A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection</div> <div class="author"> <em>Md Saiful Islam Sajol</em>, Raisa Islam, A S M Jahid Hasan, and Mainul Kabir </div> <div class="periodical"> <em>In 2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Image classification is a fundamental computer vision task crucial for interpretation of visual data. Significant advancements have been observed in image classification models over recent years. In this paper, a taxonomy is presented categorizing image classification models into CNN, Transformer, and Hybrid models, in addition to an evaluation of these models for pneumonia detection using a chest X-ray (CXR) dataset. Key metrics such as accuracy, precision, recall, F1-score, and average inference time per image were analyzed to understand tradeoffs between performance and efficiency for most feasible model selection concerning this task. Transformer-based models, particularly SwinV2, proved their robustness for pneumonia detection, achieving the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%). However, the longer inference time (133.58 ms) presents a considerable disadvantage. Although CNN models like EfficientNetB0 and ResNet50 achieved the highest precision, they underperformed in other metrics, highlighting the need for balanced evaluations. Hybrid models, such as CvT, consistently performed well across all metrics, showcasing the potential of transformers integrated with convolutional layers. However, no single model category demonstrated unanimous superiority, as CNN models exhibited much faster temporal efficiency than Transformer and Hybrid models.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2025pneumonia</span><span class="p">,</span>
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md Saiful Islam</span> Sajol </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item " data-section="about"> <a class="nav-link" href="/#about" data-section="about">about </a> </li> <li class="nav-item " data-section="news"> <a class="nav-link" href="/#news" data-section="news">news </a> </li> <li class="nav-item " data-section="experience"> <a class="nav-link" href="/#experience" data-section="experience">experience </a> </li> <li class="nav-item active" data-section="projects"> <a class="nav-link" href="/#projects" data-section="projects">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item " data-section="publications"> <a class="nav-link" href="/#publications" data-section="publications">publications </a> </li> <li class="nav-item " data-section="awards"> <a class="nav-link" href="/#awards" data-section="awards">awards </a> </li> <li class="nav-item " data-section="moments"> <a class="nav-link" href="/#moments" data-section="moments">moments </a> </li> <li class="nav-item " data-section="blog"> <a class="nav-link" href="/#blog" data-section="blog">blog </a> </li> <li class="nav-item " data-section="contact"> <a class="nav-link" href="/#contact" data-section="contact">contact </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Medical Image Classification Benchmarks</h1> <p class="post-description">CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).</p> </header> <article> <ul> <li> <strong>Brain tumor MRI (IEEE IS 2024):</strong> compared seven transformer-based or self-attention-based models with five conventional CNNs on four datasets using direct transfer learning. Transformer-based models did not show a distinct advantage; ResNet-50 performed well overall, especially on smaller datasets. <a href="https://github.com/MdSaifulIslamSajol/brain-tumor-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Skin lesions (IEEE EECSI 2024):</strong> compared CNN, transformer, and hybrid models on HAM10000 (10,015 dermatoscopic images). ConvNeXt V2 was the most accurate CNN (93.2%), ViT2 the most accurate transformer (92.66%), and CvT the best hybrid (92.20%). <a href="https://github.com/MdSaifulIslamSajol/skin-cancer-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Chest X-rays (ICAIIC 2025):</strong> a taxonomy of CNN, transformer, and hybrid classifiers evaluated for pneumonia detection. SwinV2 gave the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%) but slower inference (133.58 ms). <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Document images (IEEE CITDS 2024):</strong> ConvNeXt V2 for document image classification on Tobacco-3482 (92.25% accuracy). <a href="https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2" rel="external nofollow noopener" target="_blank">Code</a> </li> </ul> <p><strong>Publications:</strong> <a class="citation" href="#sajol2024braintumor">(Sajol &amp; Hasan, 2024; Sajol et al., 2024; Sajol et al., 2025; Sajol et al., 2024)</a></p> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2025</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>ICAIIC</div> </abbr> </div> <div id="sajol2025pneumonia" class="col-sm-8"> <div class="title">A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection</div> <div class="author"> <em>Md Saiful Islam Sajol</em>, Raisa Islam, A S M Jahid Hasan, and Mainul Kabir </div> <div class="periodical"> <em>In 2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Image classification is a fundamental computer vision task crucial for interpretation of visual data. Significant advancements have been observed in image classification models over recent years. In this paper, a taxonomy is presented categorizing image classification models into CNN, Transformer, and Hybrid models, in addition to an evaluation of these models for pneumonia detection using a chest X-ray (CXR) dataset. Key metrics such as accuracy, precision, recall, F1-score, and average inference time per image were analyzed to understand tradeoffs between performance and efficiency for most feasible model selection concerning this task. Transformer-based models, particularly SwinV2, proved their robustness for pneumonia detection, achieving the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%). However, the longer inference time (133.58 ms) presents a considerable disadvantage. Although CNN models like EfficientNetB0 and ResNet50 achieved the highest precision, they underperformed in other metrics, highlighting the need for balanced evaluations. Hybrid models, such as CvT, consistently performed well across all metrics, showcasing the potential of transformers integrated with convolutional layers. However, no single model category demonstrated unanimous superiority, as CNN models exhibited much faster temporal efficiency than Transformer and Hybrid models.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2025pneumonia</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Sajol, Md Saiful Islam and Islam, Raisa and Hasan, A S M Jahid and Kabir, Mainul}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan}</span><span class="p">,</span>
@@ -70,6 +70,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
+        },{id: "nav-experience",
+          title: "experience",
+          description: "Education, research experience, awards, service, and skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "Research projects in biology and drug discovery, reliable AI, environment and energy, and applied AI.",
@@ -91,12 +98,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/awards/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Education, research experience, awards, service, and skills. A PDF copy is available on request by email.",
+        },{id: "nav-moments",
+          title: "moments",
+          description: "Photos from award ceremonies, commencement, and research teams.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/moments/";
           },
         },{id: "nav-blog",
           title: "blog",
@@ -105,7 +112,36 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-deepfire-receives-a-special-recognition-at-xprize-wildfire",
+        },{id: "nav-contact",
+          title: "contact",
+          description: "How to reach me.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/contact/";
+          },
+        },{id: "post-awardees-named-in-xprize-wildfire-competition-to-transform-the-future-of-wildfire-response",
+        
+          title: 'Awardees named in XPRIZE Wildfire competition to transform the future of wildfire response... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "XPRIZE announcement of the Wildfire competition awardees, including DeepFire&#39;s Special Recognition.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.xprize.org/news/xprize-wildfire-awardees", "_blank");
+          
+        },
+      },{id: "post-lsu-39-s-deepfire-team-wins-xprize-wildfire-award-for-ai-that-sees-fires-coming",
+        
+          title: 'LSU&#39;s DeepFire Team Wins XPRIZE Wildfire Award for AI That Sees Fires Coming... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "LSU News coverage of the DeepFire team&#39;s $100,000 Special Recognition.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.lsu.edu/mediacenter/news/2026/09/23_deepfire_award.php", "_blank");
+          
+        },
+      },{id: "post-deepfire-receives-a-special-recognition-at-xprize-wildfire",
         
           title: "DeepFire receives a Special Recognition at XPRIZE Wildfire",
         
@@ -125,6 +161,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/dpeb-open-protein-embeddings/";
+          
+        },
+      },{id: "post-we-build-teams-that-win-lsu-combined-effort-advances-ai-to-predict-and-prevent-wildfires",
+        
+          title: 'We Build Teams That Win: LSU Combined Effort Advances AI to Predict and... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "LSU blog feature on the DeepFire team, honored through the We Build Teams That Win program.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.lsu.edu/blog/2026/02/wbttw-deepfire.php", "_blank");
           
         },
       },{id: "news-the-deepdrug-protein-embeddings-bank-dpeb-was-selected-for-the-aws-open-data-sponsorship-program",
@@ -151,13 +198,13 @@ ninja.data = [{
           section: "News",},{id: "news-contributed-to-a-nasa-roses-2025-a-13-proposal-for-an-operational-wildfire-decision-support-system-that-extends-deepfire-under-review",
           title: 'Contributed to a NASA ROSES-2025 A.13 proposal for an operational wildfire decision-support system...',
           description: "",
-          section: "News",},{id: "projects-deepdrug-protein-embeddings-bank-dpeb",
-          title: 'DeepDrug Protein Embeddings Bank (DPEB)',
-          description: "Multimodal embeddings for 22,043 human proteins and graph neural network benchmarks for protein-protein interaction prediction.",
+          section: "News",},{id: "projects-deepdrug-ai-driven-drug-discovery-and-protein-representation-learning",
+          title: 'DeepDrug, AI-Driven Drug Discovery and Protein Representation Learning',
+          description: "Drug-target interaction modeling and large-scale protein representation learning with graph-based and multimodal AI (KG-DTA and DPEB).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_dpeb/";
-            },},{id: "projects-ai-for-climate-resilient-rice",
-          title: 'AI for Climate-Resilient Rice',
+            },},{id: "projects-crisp-rice-ai-for-climate-resilient-rice-usda-grant",
+          title: 'CRISP-RICE, AI for Climate-Resilient Rice (USDA Grant)',
           description: "Machine learning to understand and predict how rice genes respond to drought, and to design regulatory DNA (USDA-NIFA CRISP-RICE).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_crisp_rice/";
@@ -166,9 +213,9 @@ ninja.data = [{
           description: "A physics-inspired navigator that searches a chemical embedding space for alternate inhibitors of a known drug.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_mopt/";
-            },},{id: "projects-reliable-ai-out-of-distribution-detection",
-          title: 'Reliable AI, Out-of-Distribution Detection',
-          description: "COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award.",
+            },},{id: "projects-lsu-and-intuit-collaboration-reliable-and-trustworthy-ai",
+          title: 'LSU and Intuit Collaboration, Reliable and Trustworthy AI',
+          description: "Industry-academia research with Intuit Inc. on out-of-distribution detection for image classification (COMBOOD and XOOD). XOOD received the ICANN 2025 Best Paper Award.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_ood/";
             },},{id: "projects-medical-image-classification-benchmarks",
@@ -176,9 +223,9 @@ ninja.data = [{
           description: "CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_medical_imaging/";
-            },},{id: "projects-deepfire-ai-for-wildfire-prediction",
-          title: 'DeepFire, AI for Wildfire Prediction',
-          description: "LSU multidisciplinary initiative; Wildfire XPRIZE finalist and $100,000 Special Recognition awardee (Space-Based Detection and Intelligence Track).",
+            },},{id: "projects-deepfire-ai-based-wildfire-prediction-and-prevention-system",
+          title: 'DeepFire, AI-Based Wildfire Prediction and Prevention System',
+          description: "LSU multidisciplinary project using AI and space-based sensing to predict and prevent wildfires; Wildfire XPRIZE finalist and $100,000 Special Recognition awardee.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_deepfire/";
             },},{id: "projects-daily-coastal-hypoxia-forecasting",
