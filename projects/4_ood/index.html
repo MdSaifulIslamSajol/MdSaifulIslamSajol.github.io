@@ -1,0 +1,254 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Reliable AI, Out-of-Distribution Detection | Md Saiful Islam Sajol </title> <meta name="author" content="Md Saiful Islam Sajol"> <meta name="description" content="COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award."> <meta name="keywords" content="Md Saiful Islam Sajol, LSU, deep learning, protein embeddings, protein-protein interaction, regulatory genomics, drug discovery, out-of-distribution detection, wildfire AI"> <meta property="og:site_name" content="Md Saiful Islam Sajol"> <meta property="og:type" content="website"> <meta property="og:title" content="Md Saiful Islam Sajol | Reliable AI, Out-of-Distribution Detection"> <meta property="og:url" content="https://mdsaifulislamsajol.github.io/projects/4_ood/"> <meta property="og:description" content="COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award."> <meta property="og:image" content="https://mdsaifulislamsajol.github.io/assets/img/prof_pic.jpg"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Reliable AI, Out-of-Distribution Detection"> <meta name="twitter:description" content="COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award."> <meta name="twitter:image" content="https://mdsaifulislamsajol.github.io/assets/img/prof_pic.jpg"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Md Saiful Islam Sajol"
+        },
+        "url": "https://mdsaifulislamsajol.github.io/projects/4_ood/",
+        "@type": "WebSite",
+        "description": "COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award.",
+        "headline": "Reliable AI, Out-of-Distribution Detection",
+        
+        "sameAs": ["https://scholar.google.com/citations?user=SqQ4_1MAAAAJ","https://github.com/MdSaifulIslamSajol","https://www.linkedin.com/in/md-saiful-islam-sajol-22261014a"],
+        
+        "name": "Md Saiful Islam Sajol",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1100px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://mdsaifulislamsajol.github.io/projects/4_ood/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md Saiful Islam</span> Sajol </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item " data-section="about"> <a class="nav-link" href="/#about" data-section="about">about </a> </li> <li class="nav-item " data-section="news"> <a class="nav-link" href="/#news" data-section="news">news </a> </li> <li class="nav-item active" data-section="projects"> <a class="nav-link" href="/#projects" data-section="projects">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item " data-section="publications"> <a class="nav-link" href="/#publications" data-section="publications">publications </a> </li> <li class="nav-item " data-section="awards"> <a class="nav-link" href="/#awards" data-section="awards">awards </a> </li> <li class="nav-item " data-section="experience"> <a class="nav-link" href="/#experience" data-section="experience">CV </a> </li> <li class="nav-item " data-section="blog"> <a class="nav-link" href="/#blog" data-section="blog">blog </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Reliable AI, Out-of-Distribution Detection</h1> <p class="post-description">COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award.</p> </header> <article> <p>This work was partially supported by Intuit. · <a href="https://github.com/MdSaifulIslamSajol/xood-icann/" rel="external nofollow noopener" target="_blank">XOOD code</a> · <a href="https://arxiv.org/abs/2602.07042" rel="external nofollow noopener" target="_blank">COMBOOD on arXiv</a></p> <div class="row justify-content-sm-center"> <div class="col-sm-8 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/award_icann_best_paper-480.webp 480w,/assets/img/award_icann_best_paper-800.webp 800w,/assets/img/award_icann_best_paper-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/award_icann_best_paper.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="ENNS Best Paper Award, ICANN 2025" data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> </div> <div class="caption">ENNS Best Paper Award certificate for XOOD at ICANN 2025.</div> <ul> <li> <strong>COMBOOD</strong> (SDM 2024, Best Poster Runner-Up): an unsupervised semi-parametric framework that combines nearest-neighbor and Mahalanobis distance signals into one confidence score for both near-OOD and far-OOD cases. It outperformed state-of-the-art methods on the OpenOOD (v1 and v1.5) benchmarks and a document image dataset, and scales linearly with the size of the embedding space.</li> <li> <strong>XOOD</strong> (ICANN 2025, Best Paper): a self-supervised, extreme-value-based framework that uses signals from the extreme values of activation layers. On benchmark datasets it reduced FPR95 by 50% and improved inference time by an order of magnitude relative to state-of-the-art methods.</li> <li>Implemented self-supervised learning techniques for feature extraction and anomaly detection in image data.</li> </ul> <p><strong>Publications:</strong> <a class="citation" href="#berglind2026xood">(Berglind et al., 2026; Rajasekaran et al., 2024)</a></p> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#b9770e"> <div>ICANN</div> </abbr> </div> <div id="berglind2026xood" class="col-sm-8"> <div class="title">XOOD: A Self-Supervised Algorithm for Detecting Out-of-Distribution Data for Image Classification</div> <div class="author"> Frej Berglind, Magesh Rajasekaran, <em>Md Saiful Islam Sajol</em>, Haron Temam, Supratik Mukhopadhyay, Kamalika Das, and <span class="more-authors" title="click to view 2 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 more authors' ? 'Sricharan Kumar, Kumar Kallurupalli' : '2 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 more authors</span> </div> <div class="periodical"> <em>In Artificial Neural Networks and Machine Learning – ICANN 2025, Lecture Notes in Computer Science, vol. 16068</em>, 2026 </div> <div class="periodical"> </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Best Paper</a> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1007/978-3-032-04558-4_42" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1007/978-3-032-04558-4_42" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/xood-icann/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>Received the <strong>ENNS Best Paper Award</strong> at ICANN 2025, the 34th International Conference on Artificial Neural Networks (European Neural Network Society, September 2025).</p> </div> <div class="abstract hidden"> <p>Neural Networks are known to be opaque in their decision-making process. In particular, it is known that, when encountering out-of-distribution (OOD) data, they can confidently provide an erroneous output without warning the user. It is well known that the "class probabilities" output by the softmax layer of a neural network are only weakly correlated with how confident the model should be about the prediction. Therefore, identifying out-of-distribution input data at inference time is critical for many applications of machine learning. We present XOOD: a self-supervised extreme value-based OOD detection framework for image classification. The algorithm relies on the signals captured by the extreme values of the data in the activation layers of the neural network in order to distinguish between in-distribution and OOD instances. We show experimentally that XOOD outperforms state-of-the-art OOD detection methods on many benchmark data sets in both efficiency and accuracy, reducing false-positive rate (FPR95) by 50%, while improving the inferencing time by an order of magnitude.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">berglind2026xood</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{XOOD: A Self-Supervised Algorithm for Detecting Out-of-Distribution Data for Image Classification}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Berglind, Frej and Rajasekaran, Magesh and Sajol, Md Saiful Islam and Temam, Haron and Mukhopadhyay, Supratik and Das, Kamalika and Kumar, Sricharan and Kallurupalli, Kumar}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Artificial Neural Networks and Machine Learning -- ICANN 2025, Lecture Notes in Computer Science, vol. 16068}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{521--532}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1007/978-3-032-04558-4_42}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#922b21"> <div>SDM</div> </abbr> </div> <div id="rajasekaran2024combood" class="col-sm-8"> <div class="title">COMBOOD: A Semiparametric Approach for Detecting Out-of-Distribution Data for Image Classification</div> <div class="author"> Magesh Rajasekaran, <em>Md Saiful Islam Sajol</em>, Frej Berglind, Supratik Mukhopadhyay, and Kamalika Das </div> <div class="periodical"> <em>In Proceedings of the 2024 SIAM International Conference on Data Mining (SDM), Texas, USA</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Best Poster Runner-Up</a> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1137/1.9781611978032.74" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a href="http://arxiv.org/abs/2602.07042" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><strong>Best Poster Runner-Up Award</strong> at the SIAM International Conference on Data Mining (SDM), 2024.</p> </div> <div class="abstract hidden"> <p>Identifying out-of-distribution (OOD) data at inference time is crucial for many machine learning applications, especially for automation. We present a novel unsupervised semi-parametric framework COMBOOD for OOD detection with respect to image recognition. Our framework combines signals from two distance metrics, nearest-neighbor and Mahalanobis, to derive a confidence score for an inference point to be out-of-distribution. The former provides a non-parametric approach to OOD detection. The latter provides a parametric, simple, yet effective method for detecting OOD data points, especially, in the far OOD scenario, where the inference point is far apart from the training data set in the embedding space. However, its performance is not satisfactory in the near OOD scenarios that arise in practical situations. Our COMBOOD framework combines the two signals in a semi-parametric setting to provide a confidence score that is accurate both for the near-OOD and far-OOD scenarios. We demonstrate experimentally that COMBOOD outperforms state-of-the-art OOD detection methods on the OpenOOD (both version 1 and most recent version 1.5) benchmark datasets (for both far-OOD and near-OOD) as well as on the documents dataset in terms of accuracy. COMBOOD scales linearly with the size of the embedding space, making it ideal for many real-life applications.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">rajasekaran2024combood</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{COMBOOD: A Semiparametric Approach for Detecting Out-of-Distribution Data for Image Classification}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Rajasekaran, Magesh and Sajol, Md Saiful Islam and Berglind, Frej and Mukhopadhyay, Supratik and Das, Kamalika}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 2024 SIAM International Conference on Data Mining (SDM), Texas, USA}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{SIAM}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{643--651}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1137/1.9781611978032.74}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Md Saiful Islam Sajol. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: October 27, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-news",
+          title: "news",
+          description: "Recent updates, awards, and papers.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research projects in biology and drug discovery, reliable AI, environment and energy, and applied AI.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Peer-reviewed papers and manuscripts in reverse chronological order. Full list on Google Scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-awards",
+          title: "awards",
+          description: "Honors and awards for research and teamwork.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/awards/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Education, research experience, awards, service, and skills. A PDF copy is available on request by email.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "post-deepfire-receives-a-special-recognition-at-xprize-wildfire",
+        
+          title: "DeepFire receives a Special Recognition at XPRIZE Wildfire",
+        
+        description: "The LSU DeepFire team&#39;s result in the Space-Based Wildfire Detection and Intelligence Track.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deepfire-xprize-wildfire/";
+          
+        },
+      },{id: "post-dpeb-open-multimodal-embeddings-for-22-043-human-proteins",
+        
+          title: "DPEB: open multimodal embeddings for 22,043 human proteins",
+        
+        description: "What the DeepDrug Protein Embeddings Bank contains and where to get it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dpeb-open-protein-embeddings/";
+          
+        },
+      },{id: "news-the-deepdrug-protein-embeddings-bank-dpeb-was-selected-for-the-aws-open-data-sponsorship-program",
+          title: 'The DeepDrug Protein Embeddings Bank (DPEB) was selected for the AWS Open Data...',
+          description: "",
+          section: "News",},{id: "news-our-paper-xood-received-the-enns-best-paper-award-at-icann-2025-the-34th-international-conference-on-artificial-neural-networks-paper-code",
+          title: 'Our paper XOOD received the ENNS Best Paper Award at ICANN 2025, the...',
+          description: "",
+          section: "News",},{id: "news-received-the-lsu-tiger-team-award-we-build-teams-that-win-for-contributions-to-the-deepfire-wildfire-project-lsu-story",
+          title: 'Received the LSU Tiger Team Award (We Build Teams That Win) for contributions...',
+          description: "",
+          section: "News",},{id: "news-dpeb-accepted-in-nar-genomics-and-bioinformatics-paper-data-code",
+          title: 'DPEB accepted in NAR Genomics and Bioinformatics. Paper · Data · Code',
+          description: "",
+          section: "News",},{id: "news-completed-my-m-sc-in-computer-science-and-engineering-at-louisiana-state-university-with-a-thesis-on-predicting-drought-responsive-gene-regulation-in-rice",
+          title: 'Completed my M.Sc. in Computer Science and Engineering at Louisiana State University, with...',
+          description: "",
+          section: "News",},{id: "news-started-a-data-analyst-internship-at-the-capital-region-planning-commission-building-an-ai-llm-integrated-dashboard-demo-video",
+          title: 'Started a Data Analyst Internship at the Capital Region Planning Commission, building an...',
+          description: "",
+          section: "News",},{id: "news-the-lsu-deepfire-team-received-the-100-000-special-recognition-in-the-wildfire-xprize-space-based-detection-and-intelligence-track-xprize-lsu-news-demo-video",
+          title: 'The LSU DeepFire team received the $100,000 Special Recognition in the Wildfire XPRIZE...',
+          description: "",
+          section: "News",},{id: "news-contributed-to-a-nasa-roses-2025-a-13-proposal-for-an-operational-wildfire-decision-support-system-that-extends-deepfire-under-review",
+          title: 'Contributed to a NASA ROSES-2025 A.13 proposal for an operational wildfire decision-support system...',
+          description: "",
+          section: "News",},{id: "projects-deepdrug-protein-embeddings-bank-dpeb",
+          title: 'DeepDrug Protein Embeddings Bank (DPEB)',
+          description: "Multimodal embeddings for 22,043 human proteins and graph neural network benchmarks for protein-protein interaction prediction.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_dpeb/";
+            },},{id: "projects-regulatory-genomics-for-climate-resilient-rice",
+          title: 'Regulatory Genomics for Climate-Resilient Rice',
+          description: "CARCM, GatedFusion, and CisGPT for predicting and designing drought-responsive gene regulation (USDA-NIFA CRISP-RICE).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_crisp_rice/";
+            },},{id: "projects-mopt-for-drug-design",
+          title: 'MOPT for Drug Design',
+          description: "A physics-inspired navigator that searches a chemical embedding space for alternate inhibitors of a known drug.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_mopt/";
+            },},{id: "projects-reliable-ai-out-of-distribution-detection",
+          title: 'Reliable AI, Out-of-Distribution Detection',
+          description: "COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_ood/";
+            },},{id: "projects-medical-image-classification-benchmarks",
+          title: 'Medical Image Classification Benchmarks',
+          description: "CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_medical_imaging/";
+            },},{id: "projects-deepfire-ai-for-wildfire-prediction",
+          title: 'DeepFire, AI for Wildfire Prediction',
+          description: "LSU multidisciplinary initiative; Wildfire XPRIZE finalist and $100,000 Special Recognition awardee (Space-Based Detection and Intelligence Track).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_deepfire/";
+            },},{id: "projects-daily-coastal-hypoxia-forecasting",
+          title: 'Daily Coastal Hypoxia Forecasting',
+          description: "Benchmark of BiLSTM, Medformer, Spatio-Temporal Transformer, and TCN for daily hypoxia classification on the Louisiana-Texas shelf (IEEE BigData 2025).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_hypoxia/";
+            },},{id: "projects-domain-adaptation-for-renewable-energy",
+          title: 'Domain Adaptation for Renewable Energy',
+          description: "Deep domain-adaptive models for wind power, solar power, and building load prediction under geographic distribution shift.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_domain_adaptation/";
+            },},{id: "projects-ai-dashboard-for-regional-planning-crpc-internship",
+          title: 'AI Dashboard for Regional Planning (CRPC Internship)',
+          description: "AI/LLM-integrated dashboard and agentic GIS maps for distressed and underserved communities, Capital Region Planning Commission (2026).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_crpc/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%73%61%6A%6F%6C%31@%6C%73%75.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=SqQ4_1MAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/MdSaifulIslamSajol", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/md-saiful-islam-sajol-22261014a", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>

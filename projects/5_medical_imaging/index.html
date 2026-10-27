@@ -1,0 +1,262 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Medical Image Classification Benchmarks | Md Saiful Islam Sajol </title> <meta name="author" content="Md Saiful Islam Sajol"> <meta name="description" content="CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers)."> <meta name="keywords" content="Md Saiful Islam Sajol, LSU, deep learning, protein embeddings, protein-protein interaction, regulatory genomics, drug discovery, out-of-distribution detection, wildfire AI"> <meta property="og:site_name" content="Md Saiful Islam Sajol"> <meta property="og:type" content="website"> <meta property="og:title" content="Md Saiful Islam Sajol | Medical Image Classification Benchmarks"> <meta property="og:url" content="https://mdsaifulislamsajol.github.io/projects/5_medical_imaging/"> <meta property="og:description" content="CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers)."> <meta property="og:image" content="https://mdsaifulislamsajol.github.io/assets/img/prof_pic.jpg"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Medical Image Classification Benchmarks"> <meta name="twitter:description" content="CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers)."> <meta name="twitter:image" content="https://mdsaifulislamsajol.github.io/assets/img/prof_pic.jpg"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Md Saiful Islam Sajol"
+        },
+        "url": "https://mdsaifulislamsajol.github.io/projects/5_medical_imaging/",
+        "@type": "WebSite",
+        "description": "CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).",
+        "headline": "Medical Image Classification Benchmarks",
+        
+        "sameAs": ["https://scholar.google.com/citations?user=SqQ4_1MAAAAJ","https://github.com/MdSaifulIslamSajol","https://www.linkedin.com/in/md-saiful-islam-sajol-22261014a"],
+        
+        "name": "Md Saiful Islam Sajol",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 1100px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://mdsaifulislamsajol.github.io/projects/5_medical_imaging/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Md Saiful Islam</span> Sajol </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item " data-section="about"> <a class="nav-link" href="/#about" data-section="about">about </a> </li> <li class="nav-item " data-section="news"> <a class="nav-link" href="/#news" data-section="news">news </a> </li> <li class="nav-item active" data-section="projects"> <a class="nav-link" href="/#projects" data-section="projects">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item " data-section="publications"> <a class="nav-link" href="/#publications" data-section="publications">publications </a> </li> <li class="nav-item " data-section="awards"> <a class="nav-link" href="/#awards" data-section="awards">awards </a> </li> <li class="nav-item " data-section="experience"> <a class="nav-link" href="/#experience" data-section="experience">CV </a> </li> <li class="nav-item " data-section="blog"> <a class="nav-link" href="/#blog" data-section="blog">blog </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Medical Image Classification Benchmarks</h1> <p class="post-description">CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).</p> </header> <article> <ul> <li> <strong>Brain tumor MRI (IEEE IS 2024):</strong> compared seven transformer-based or self-attention-based models with five conventional CNNs on four datasets using direct transfer learning. Transformer-based models did not show a distinct advantage; ResNet-50 performed well overall, especially on smaller datasets. <a href="https://github.com/MdSaifulIslamSajol/brain-tumor-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Skin lesions (IEEE EECSI 2024):</strong> compared CNN, transformer, and hybrid models on HAM10000 (10,015 dermatoscopic images). ConvNeXt V2 was the most accurate CNN (93.2%), ViT2 the most accurate transformer (92.66%), and CvT the best hybrid (92.20%). <a href="https://github.com/MdSaifulIslamSajol/skin-cancer-detection" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Chest X-rays (ICAIIC 2025):</strong> a taxonomy of CNN, transformer, and hybrid classifiers evaluated for pneumonia detection. SwinV2 gave the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%) but slower inference (133.58 ms). <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" rel="external nofollow noopener" target="_blank">Code</a> </li> <li> <strong>Document images (IEEE CITDS 2024):</strong> ConvNeXt V2 for document image classification on Tobacco-3482 (92.25% accuracy). <a href="https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2" rel="external nofollow noopener" target="_blank">Code</a> </li> </ul> <p><strong>Publications:</strong> <a class="citation" href="#sajol2024braintumor">(Sajol &amp; Hasan, 2024; Sajol et al., 2024; Sajol et al., 2025; Sajol et al., 2024)</a></p> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2025</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>ICAIIC</div> </abbr> </div> <div id="sajol2025pneumonia" class="col-sm-8"> <div class="title">A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection</div> <div class="author"> <em>Md Saiful Islam Sajol</em>, Raisa Islam, A S M Jahid Hasan, and Mainul Kabir </div> <div class="periodical"> <em>In 2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/ICAIIC64266.2025.10920790" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Image classification is a fundamental computer vision task crucial for interpretation of visual data. Significant advancements have been observed in image classification models over recent years. In this paper, a taxonomy is presented categorizing image classification models into CNN, Transformer, and Hybrid models, in addition to an evaluation of these models for pneumonia detection using a chest X-ray (CXR) dataset. Key metrics such as accuracy, precision, recall, F1-score, and average inference time per image were analyzed to understand tradeoffs between performance and efficiency for most feasible model selection concerning this task. Transformer-based models, particularly SwinV2, proved their robustness for pneumonia detection, achieving the highest accuracy (95.03%), recall (94.66%), and F1-score (94.70%). However, the longer inference time (133.58 ms) presents a considerable disadvantage. Although CNN models like EfficientNetB0 and ResNet50 achieved the highest precision, they underperformed in other metrics, highlighting the need for balanced evaluations. Hybrid models, such as CvT, consistently performed well across all metrics, showcasing the potential of transformers integrated with convolutional layers. However, no single model category demonstrated unanimous superiority, as CNN models exhibited much faster temporal efficiency than Transformer and Hybrid models.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2025pneumonia</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sajol, Md Saiful Islam and Islam, Raisa and Hasan, A S M Jahid and Kabir, Mainul}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/ICAIIC64266.2025.10920790}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>IEEE IS</div> </abbr> </div> <div id="sajol2024braintumor" class="col-sm-8"> <div class="title">Benchmarking CNN and Cutting-Edge Transformer Models for Brain Tumor Classification through Transfer Learning</div> <div class="author"> <em>Md Saiful Islam Sajol</em> and A S M Jahid Hasan </div> <div class="periodical"> <em>In 2024 IEEE 12th International Conference on Intelligent Systems (IS), Bulgaria</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/IS61756.2024.10705175" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/IS61756.2024.10705175" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/brain-tumor-detection" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Brain tumor is a serious disease that can lead to fatal consequences. Moreover, there are different types of brain tumor with different progression rate and severeness. Thus, brain tumor classification is an essential task in medical diagnosis. Convolutional Neural Network (CNN) based deep learning methods have shown great potential for brain tumor classification using Magnetic Resonance Imaging (MRI) scans of the brain. Recent developments in transformer based deep learning models have shown promising outcomes in image classification tasks. However, these models have not yet been much explored in the application of brain tumor classification. In this paper, we employ seven advanced models which utilize transformers or mimic the self-attention operation of transformers through their design, for brain tumor classification. To assess their performance for this particular task, five conventional CNN based methods have also been applied and compared with these models. To make our assessment more coherent and comprehensive we perform the comparison for four different datasets. The results indicate that transformer-based advanced models do not provide a distinct advantage over conventional CNN-based models. The CNN-based ResNet-50 performs well overall, especially with smaller datasets. For larger datasets, transformer-based models generally perform better than CNN-based models, although the difference is not significant.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2024braintumor</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Benchmarking CNN and Cutting-Edge Transformer Models for Brain Tumor Classification through Transfer Learning}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sajol, Md Saiful Islam and Hasan, A S M Jahid}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2024 IEEE 12th International Conference on Intelligent Systems (IS), Bulgaria}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/IS61756.2024.10705175}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>EECSI</div> </abbr> </div> <div id="sajol2024skincancer" class="col-sm-8"> <div class="title">Performance Assessment of Advanced CNN and Transformer Architectures in Skin Cancer Detection</div> <div class="author"> <em>Md Saiful Islam Sajol</em>, S. T. Alvi, and C. A. A. Era </div> <div class="periodical"> <em>In 2024 11th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI), Indonesia</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/EECSI63442.2024.10776508" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/EECSI63442.2024.10776508" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/skin-cancer-detection" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Skin cancer has always been one of the most common types of cancer in medical history. To find skin problems early, it is necessary to have a reliable automated method for recognizing them. Our study is based on the HAM10000 dataset, which is made up of 10015 different dermatoscopic pictures of common pigmented skin lesions from different sources. The newest deep learning techniques, such as Convolutional Neural Networks (CNN), Transformers, and Hybrid models, i.e., ConvNeXt V2, SwinV2, ViT2, CvT, DenseNet, ResNet, PVTv2, EfficientNet, EfficientFormer, VGG, MobileNet, MobileViTV2, GoogLeNet, are all compared in this study to see which one is better for automatically detecting skin cancer lesions. We found the best model for identifying skin lesions by determining its accuracy, F1-score, inference time, and confusion matrix. Among our implemented models, the ConvNeXt V2 model has an accuracy of 93.2% with the lowest inference time.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2024skincancer</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Performance Assessment of Advanced CNN and Transformer Architectures in Skin Cancer Detection}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sajol, Md Saiful Islam and Alvi, S. T. and Era, C. A. A.}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2024 11th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI), Indonesia}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/EECSI63442.2024.10776508}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2874a6"> <div>CITDS</div> </abbr> </div> <div id="sajol2024convnextv2" class="col-sm-8"> <div class="title">A ConvNeXt V2 Approach to Document Image Analysis: Enhancing High-Accuracy Classification</div> <div class="author"> <em>Md Saiful Islam Sajol</em>, A S M Jahid Hasan, Md Shazid Islam, and Md Saydur Rahman </div> <div class="periodical"> <em>In 2024 IEEE 3rd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary</em>, 2024 </div> <div class="periodical"> </div> <div class="links"> <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> <a href="https://doi.org/10.1109/CITDS62610.2024.10791343" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://doi.org/10.1109/CITDS62610.2024.10791343" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> <a href="https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="abstract hidden"> <p>Proper classification of documents is of tremendous importance for an organization. As digital copies of documents are now available due to technological advances, it has become convenient to classify them automatically using machine learning or deep learning algorithms. Deep CNNs have been widely applied for document image classification, whereas newly introduced transformer-based models have also presented favorable outcomes. In this paper, one of the advanced and very high-performing deep CNN models, ConvNeXt V2, developed very recently, has been adapted for the document image classification task, which leverages the imitation of the self-attention mechanism of transformers through the use of masked autoencoders. Prior studies have suggested that models pre-trained on ImageNet may not perform optimally when directly applied to document classification tasks. Nevertheless, our findings reveal substantial enhancements in performance using ConvNeXt V2, indicating that further domain-specific pre-training (for instance, on the RVL-CDIP dataset) might not be essential for attaining high accuracy. The model has been applied to one of the most standard document image classification datasets, Tobacco-3482. The results show a high overall accuracy of 92.25% with fast convergence, outperforming several other state-of-the-art methods.</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">sajol2024convnextv2</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A ConvNeXt V2 Approach to Document Image Analysis: Enhancing High-Accuracy Classification}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sajol, Md Saiful Islam and Hasan, A S M Jahid and Islam, Md Shazid and Rahman, Md Saydur}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2024 IEEE 3rd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/CITDS62610.2024.10791343}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Md Saiful Islam Sajol. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: October 27, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-news",
+          title: "news",
+          description: "Recent updates, awards, and papers.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research projects in biology and drug discovery, reliable AI, environment and energy, and applied AI.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Peer-reviewed papers and manuscripts in reverse chronological order. Full list on Google Scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-awards",
+          title: "awards",
+          description: "Honors and awards for research and teamwork.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/awards/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Education, research experience, awards, service, and skills. A PDF copy is available on request by email.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "post-deepfire-receives-a-special-recognition-at-xprize-wildfire",
+        
+          title: "DeepFire receives a Special Recognition at XPRIZE Wildfire",
+        
+        description: "The LSU DeepFire team&#39;s result in the Space-Based Wildfire Detection and Intelligence Track.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/deepfire-xprize-wildfire/";
+          
+        },
+      },{id: "post-dpeb-open-multimodal-embeddings-for-22-043-human-proteins",
+        
+          title: "DPEB: open multimodal embeddings for 22,043 human proteins",
+        
+        description: "What the DeepDrug Protein Embeddings Bank contains and where to get it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dpeb-open-protein-embeddings/";
+          
+        },
+      },{id: "news-the-deepdrug-protein-embeddings-bank-dpeb-was-selected-for-the-aws-open-data-sponsorship-program",
+          title: 'The DeepDrug Protein Embeddings Bank (DPEB) was selected for the AWS Open Data...',
+          description: "",
+          section: "News",},{id: "news-our-paper-xood-received-the-enns-best-paper-award-at-icann-2025-the-34th-international-conference-on-artificial-neural-networks-paper-code",
+          title: 'Our paper XOOD received the ENNS Best Paper Award at ICANN 2025, the...',
+          description: "",
+          section: "News",},{id: "news-received-the-lsu-tiger-team-award-we-build-teams-that-win-for-contributions-to-the-deepfire-wildfire-project-lsu-story",
+          title: 'Received the LSU Tiger Team Award (We Build Teams That Win) for contributions...',
+          description: "",
+          section: "News",},{id: "news-dpeb-accepted-in-nar-genomics-and-bioinformatics-paper-data-code",
+          title: 'DPEB accepted in NAR Genomics and Bioinformatics. Paper · Data · Code',
+          description: "",
+          section: "News",},{id: "news-completed-my-m-sc-in-computer-science-and-engineering-at-louisiana-state-university-with-a-thesis-on-predicting-drought-responsive-gene-regulation-in-rice",
+          title: 'Completed my M.Sc. in Computer Science and Engineering at Louisiana State University, with...',
+          description: "",
+          section: "News",},{id: "news-started-a-data-analyst-internship-at-the-capital-region-planning-commission-building-an-ai-llm-integrated-dashboard-demo-video",
+          title: 'Started a Data Analyst Internship at the Capital Region Planning Commission, building an...',
+          description: "",
+          section: "News",},{id: "news-the-lsu-deepfire-team-received-the-100-000-special-recognition-in-the-wildfire-xprize-space-based-detection-and-intelligence-track-xprize-lsu-news-demo-video",
+          title: 'The LSU DeepFire team received the $100,000 Special Recognition in the Wildfire XPRIZE...',
+          description: "",
+          section: "News",},{id: "news-contributed-to-a-nasa-roses-2025-a-13-proposal-for-an-operational-wildfire-decision-support-system-that-extends-deepfire-under-review",
+          title: 'Contributed to a NASA ROSES-2025 A.13 proposal for an operational wildfire decision-support system...',
+          description: "",
+          section: "News",},{id: "projects-deepdrug-protein-embeddings-bank-dpeb",
+          title: 'DeepDrug Protein Embeddings Bank (DPEB)',
+          description: "Multimodal embeddings for 22,043 human proteins and graph neural network benchmarks for protein-protein interaction prediction.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_dpeb/";
+            },},{id: "projects-regulatory-genomics-for-climate-resilient-rice",
+          title: 'Regulatory Genomics for Climate-Resilient Rice',
+          description: "CARCM, GatedFusion, and CisGPT for predicting and designing drought-responsive gene regulation (USDA-NIFA CRISP-RICE).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_crisp_rice/";
+            },},{id: "projects-mopt-for-drug-design",
+          title: 'MOPT for Drug Design',
+          description: "A physics-inspired navigator that searches a chemical embedding space for alternate inhibitors of a known drug.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_mopt/";
+            },},{id: "projects-reliable-ai-out-of-distribution-detection",
+          title: 'Reliable AI, Out-of-Distribution Detection',
+          description: "COMBOOD and XOOD, methods that flag inputs a classifier has not been trained for. XOOD received the ICANN 2025 Best Paper Award.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_ood/";
+            },},{id: "projects-medical-image-classification-benchmarks",
+          title: 'Medical Image Classification Benchmarks',
+          description: "CNN, transformer, and hybrid models compared on brain tumor MRI, skin lesions, and chest X-rays (three first-author papers).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_medical_imaging/";
+            },},{id: "projects-deepfire-ai-for-wildfire-prediction",
+          title: 'DeepFire, AI for Wildfire Prediction',
+          description: "LSU multidisciplinary initiative; Wildfire XPRIZE finalist and $100,000 Special Recognition awardee (Space-Based Detection and Intelligence Track).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_deepfire/";
+            },},{id: "projects-daily-coastal-hypoxia-forecasting",
+          title: 'Daily Coastal Hypoxia Forecasting',
+          description: "Benchmark of BiLSTM, Medformer, Spatio-Temporal Transformer, and TCN for daily hypoxia classification on the Louisiana-Texas shelf (IEEE BigData 2025).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_hypoxia/";
+            },},{id: "projects-domain-adaptation-for-renewable-energy",
+          title: 'Domain Adaptation for Renewable Energy',
+          description: "Deep domain-adaptive models for wind power, solar power, and building load prediction under geographic distribution shift.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_domain_adaptation/";
+            },},{id: "projects-ai-dashboard-for-regional-planning-crpc-internship",
+          title: 'AI Dashboard for Regional Planning (CRPC Internship)',
+          description: "AI/LLM-integrated dashboard and agentic GIS maps for distressed and underserved communities, Capital Region Planning Commission (2026).",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_crpc/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6D%73%61%6A%6F%6C%31@%6C%73%75.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=SqQ4_1MAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/MdSaifulIslamSajol", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/md-saiful-islam-sajol-22261014a", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
