@@ -803,6 +803,18 @@ html[data-theme="dark"] {
   padding: 0.1rem 0.5rem;
 }
 
+/* ---------- publications: year headings ("Year - 2026") ---------- */
+html .publications h2.bibliography {
+  color: var(--global-text-color-light);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+html .publications h2.bibliography::before {
+  content: "Year - ";
+  font-weight: 500;
+}
+
 /* ---------- publications: alternate background for consecutive papers ---------- */
 .publications ol.bibliography > li {
   padding: 0.9rem 0.8rem 0.6rem;
