@@ -5,6 +5,47 @@
  * deploy workflow does not strip classes that JavaScript adds at runtime.
  */
 
+/* ---------- site palette (overrides al-folio theme variables) ----------
+   Light mode: soft gray page, slightly darker gray cards, near-black text,
+   and the dark-mode blue (one shade deeper so it stays readable on gray).
+   Dark mode: the original background and blue, with brighter text.
+   All text colors meet WCAG AA contrast (4.5:1) on both page and cards. */
+:root {
+  --global-bg-color: #eef1f5;
+  --global-card-bg-color: #e3e8ef;
+  --global-text-color: #0f172a;
+  --global-text-color-light: #334155;
+  --global-theme-color: #176b89;
+  --global-hover-color: #176b89;
+  --global-hover-text-color: #ffffff;
+  --global-divider-color: #cbd5e1;
+  --global-code-bg-color: rgba(23, 107, 137, 0.08);
+  --global-footer-bg-color: #1e293b;
+  --global-footer-text-color: #cbd5e1;
+  --global-footer-link-color: #ffffff;
+  --global-newsletter-bg-color: #e3e8ef;
+  --global-newsletter-text-color: #0f172a;
+}
+html[data-theme="dark"] {
+  --global-text-color: #e2e8f0;
+  --global-text-color-light: #aab4c2;
+  --global-theme-color: #2698ba;
+  --global-hover-color: #2698ba;
+  --global-divider-color: #3a3f45;
+  --global-code-bg-color: #2c3237;
+}
+
+/* The theme's base font weight (300) reads too thin; use regular weight. */
+body {
+  font-weight: 400;
+}
+.card-text,
+.post-description,
+.periodical,
+.author {
+  color: var(--global-text-color-light);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -403,7 +444,8 @@ html[data-theme="dark"] {
   margin: 0.15rem 0 0.2rem;
 }
 .sx-award-org {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   color: var(--sx-muted);
   margin: 0 0 0.45rem;
 }
@@ -499,6 +541,7 @@ html[data-theme="dark"] {
 }
 .sx-tl-org {
   font-size: 0.9rem;
+  font-weight: 500;
   color: var(--sx-muted);
   margin: 0 0 0.35rem;
 }
