@@ -7,13 +7,13 @@ first_name: Md Saiful Islam
 middle_name:
 last_name: Sajol
 contact_note: >
-  Email is the best way to reach me. I am open to postdoctoral research positions in machine learning for biology, drug discovery, and environmental science.
+  Email is the best way to reach me. I am open to postdoctoral research positions in AI and machine learning for science.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Md Saiful Islam Sajol is a Ph.D. student in Computer Science and Engineering at Louisiana State University working on deep learning for proteins, regulatory genomics, drug discovery, and reliable AI.
+  Md Saiful Islam Sajol is a Ph.D. student in Computer Science and Engineering at Louisiana State University working on artificial intelligence, machine learning, agentic AI, and LLMs for computational biology, bioinformatics, computer vision, and wildfire detection with space-based sensing.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Md Saiful Islam Sajol, LSU, deep learning, protein embeddings, protein-protein interaction, regulatory genomics, drug discovery, out-of-distribution detection, wildfire AI
+keywords: Md Saiful Islam Sajol, LSU, artificial intelligence, machine learning, agentic AI, large language models, computational biology, bioinformatics, computer vision, wildfire, remote sensing
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧬 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.

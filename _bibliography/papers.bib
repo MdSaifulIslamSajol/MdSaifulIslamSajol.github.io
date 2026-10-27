@@ -12,7 +12,7 @@
 
 @unpublished{sajol2026cisgpt,
   abbr        = {Preprint},
-  title       = {CisGPT: Plan-then-Fill Design of Cis-Regulatory DNA Generalises across Plant, Fungal and Human Regulatory Grammars},
+  title       = {CisGPT: Generative Design of Cis-Regulatory DNA},
   author      = {Sajol, Md Saiful Islam and others},
   note        = {Manuscript in preparation},
   year        = {2026},
@@ -35,10 +35,6 @@
   author      = {Sajol, Md Saiful Islam and Rajasekaran, Magesh and Alvin, Chris and Mukhopadhyay, Supratik and Subudhi, Prasanta K.},
   note        = {Submitted to Artificial Intelligence in Agriculture},
   year        = {2026},
-  code        = {https://github.com/MdSaifulIslamSajol/CARCM},
-  preview     = {carcm.jpg},
-  abstract    = {Rice feeds more than half the world, yet drought remains one of the biggest threats to its yield. Drought stress triggers widespread differential expression, up-regulating some genes and down-regulating others. Whether a gene responds depends not just on its DNA sequence, but on which variety of rice it comes from, which tissue is under stress, and what stage of growth the plant has reached. Existing models largely ignore this context, treating gene regulation as a fixed property of the sequence alone. We propose CARCM, a model that reads known regulatory signals in rice promoter sequences and combines them with the biological context: variety, tissue, and developmental stage through a gated attention mechanism. Trained on 44,502 gene expression records drawn from 13 rice varieties, 8 tissues, and 6 developmental stages, CARCM achieves an AUC of 0.852 and an F1 of 0.791, outperforming 12 classical and deep learning baselines and 8 DNA foundation models, including plant-specific ones. Ablation experiments show that removing biological context drops performance by 0.232 AUC, and on three tissue types, the sequence alone performs worse than random guessing. These results show that drought-responsive gene regulation in rice is governed by context-dependent cis-regulatory grammar, and explicit biological conditioning is a core requirement for predicting how rice genes respond to drought. We further show that the framework transfers across stresses: a drought-pretrained CARCM encoder reused on a smaller salt-stress dataset raises test AUC from 0.652 (training on salt alone) to 0.829, indicating that the approach generalizes beyond drought and is effective in low-data settings.},
-  selected    = {true},
   bibtex_show = {true},
 }
 
@@ -49,7 +45,6 @@
   note        = {Submitted to the TADD-Climate 2026 workshop, IEEE International Conference on Big Data (IEEE BigData 2026)},
   year        = {2026},
   code        = {https://github.com/MdSaifulIslamSajol/Drought-Responsive-Rice-Gene-Regulation-Prediction},
-  abstract    = {We address the binary classification problem of predicting drought-responsive gene regulation direction (up- vs. down-regulated) in rice from 1,000 bp promoter sequences and biological context metadata. We use 44,502 samples from the RiceMetaSys database consisting of 13 rice varieties, 8 tissue types, and 6 developmental stages. We engineer an 85-dimensional feature vector combining counts of 54 known cis-regulatory motifs, four compositional sequence statistics, and one-hot-encoded biological context. We propose GatedFusion, a bidirectional LSTM with a learned sigmoid gate that dynamically weights motif representations against biological context embeddings, and evaluate it against six baseline architectures. A custom HierarchicalFocalLoss addresses simultaneous class and condition imbalance arising from the highly skewed variety distribution. GatedFusion achieves the best Matthews Correlation Coefficient (MCC = 0.4213) and Precision (0.7335) on the held-out test set, with ROC-AUC = 0.7815 and PR-AUC = 0.8029. A top-k variety selection analysis identifies all 13 varieties as the optimal training configuration (AUC = 0.7958). A controlled context-sensitivity experiment on 551 test promoters appearing under multiple biological contexts confirms that GatedFusion adjusts its predictions correctly when biological context genuinely changes the regulation direction.},
   bibtex_show = {true},
 }
 
@@ -72,7 +67,6 @@
   website     = {https://registry.opendata.aws/deepdrug-dpeb/},
   preview     = {dpeb.jpg},
   abstract    = {Computationally predicting protein-protein interactions (PPIs) is challenging due to the lack of integrated, multimodal protein representations. DeepDrug Protein Embeddings Bank (DPEB) is a curated collection of 22 043 human proteins that integrates four embedding types: structural (AlphaFold2), transformer-based sequence (BioEmbeddings), contextual amino acid patterns (ESM-2: Evolutionary Scale Modeling), and sequence-based n-gram statistics (ProtVec). AlphaFold2 protein structures are available through public databases (e.g. AlphaFold2 Protein Structure Database), but the internal neural network embeddings are not. DPEB addresses this gap by providing AlphaFold2-derived embeddings for computational modeling. Our benchmark evaluations show GraphSAGE with BioEmbedding achieved the highest PPI prediction performance (87.37\% AUROC, 79.16\% accuracy). The framework also achieved 77.42\% accuracy for enzyme classification and 86.04\% accuracy for protein family classification. DPEB supports multiple graph neural network methods for PPI prediction, enabling applications in systems biology, drug target identification, pathway analysis, and disease mechanism studies.},
-  additional_info = {. Data on the [AWS Open Data Registry](https://registry.opendata.aws/deepdrug-dpeb/); archived on [Zenodo](https://doi.org/10.5281/zenodo.19008090)},
   selected    = {true},
   bibtex_show = {true},
 }

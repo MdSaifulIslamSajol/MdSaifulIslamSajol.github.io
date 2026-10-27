@@ -11,9 +11,9 @@ cv:
   website: https://mdsaifulislamsajol.github.io
   summary: >
     Ph.D. student at Louisiana State University (expected July 2027) working as a Graduate Research Assistant under
-    Dr. Supratik Mukhopadhyay. I develop, apply, and benchmark deep learning methods for protein and other biological data,
-    including protein-protein interaction prediction, protein embeddings from pretrained sequence and structure models,
-    regulatory genomics, and computational drug discovery, with a focus on rigorous benchmarking and openly released research software.
+    Dr. Supratik Mukhopadhyay. I work with artificial intelligence and machine learning, including deep learning, agentic AI,
+    and large language models, across computational biology and bioinformatics, drug discovery, computer vision, and
+    wildfire detection and prevention using space-based sensor technology, with a focus on reliable, openly released research software.
     First author of eight published peer-reviewed papers.
 
   social_networks:
@@ -144,7 +144,6 @@ cv:
     Software and Data:
       - bullet: "**DPEB (v1.0.1):** multimodal human protein embeddings and reproducible code. [AWS Open Data](https://registry.opendata.aws/deepdrug-dpeb/), [GitHub](https://github.com/deepdrugai/DPEB), [Zenodo archive](https://doi.org/10.5281/zenodo.19008090)."
       - bullet: "**XOOD:** code for the self-supervised OOD detection method (ICANN 2025). [GitHub](https://github.com/MdSaifulIslamSajol/xood-icann/)."
-      - bullet: "**CARCM:** context-aware rice cis-regulatory motif framework. [GitHub](https://github.com/MdSaifulIslamSajol/CARCM)."
       - bullet: "**Drought-responsive rice gene regulation prediction:** code for GatedFusion and baselines. [GitHub](https://github.com/MdSaifulIslamSajol/Drought-Responsive-Rice-Gene-Regulation-Prediction)."
 
     Paper Review:
@@ -177,13 +176,22 @@ cv:
         keywords: "PyTorch, TensorFlow, Keras, DGL, CUDA, scikit-learn, Pandas, NumPy"
       - name: Biomedical and Genomic Data
         icon: fa-solid fa-dna
-        keywords: "PPI graphs (UniProt, HPRD, HuMAP, IntAct, STRING), promoter sequence modeling, motif features, RiceMetaSys, medical image analysis"
+        keywords: "Protein interaction graphs (UniProt, HPRD, HuMAP, IntAct, STRING), regulatory genomics, RiceMetaSys, medical image analysis"
       - name: Foundation Models
         icon: fa-solid fa-cubes
-        keywords: "ESM-2, ProtTrans BERT-BFD, AlphaFold2 representations, ProtVec, DNA foundation model fine-tuning, gated fusion and cross-attention"
+        keywords: "ESM-2, ProtTrans BERT-BFD, AlphaFold2 representations, ProtVec, DNA foundation model fine-tuning, transfer learning"
+      - name: LLMs and Agentic AI
+        icon: fa-solid fa-robot
+        keywords: "Applied LLM development, AI/LLM-integrated dashboards, agentic AI-enhanced GIS maps, transformer text classification"
+      - name: Geospatial and Environmental Data
+        icon: fa-solid fa-satellite
+        keywords: "Satellite imagery and meteorological data (DeepFire), GIS mapping, COAWST hindcast output, NREL solar, weather, and building load data"
+      - name: Computer Vision
+        icon: fa-solid fa-eye
+        keywords: "Image classification, transfer learning, self-supervised feature learning, unsupervised image segmentation, medical image analysis"
       - name: Architectures
         icon: fa-solid fa-diagram-project
-        keywords: "CNNs, Vision Transformers, hybrid models, BiLSTM, TCN, spatio-temporal transformers, autoregressive transformers, VAEs, GNNs (GraphSAGE, GCN, GAT, GIN)"
+        keywords: "CNNs, Vision Transformers, hybrid models, BiLSTM, TCN, spatio-temporal transformers, VAEs, GNNs (GraphSAGE, GCN, GAT, GIN)"
       - name: HPC and Cloud
         icon: fa-solid fa-server
         keywords: "Multi-GPU Linux servers (8x A100, 8x V100), NVLink, AWS (S3, Open Data)"
