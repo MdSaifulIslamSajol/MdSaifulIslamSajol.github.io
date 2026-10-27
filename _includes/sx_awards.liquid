@@ -1,0 +1,30 @@
+{% comment %}
+  Honors and awards as full-width rows: image on the left third, text on the right two thirds
+  (site-specific include, not part of al-folio). Data: _data/awards.yml. Used on the home page and /awards/.
+{% endcomment %}
+<div class="sx-award-rows">
+  {% for award in site.data.awards %}
+    <article class="sx-award-row">
+      {% if award.image %}
+        <div class="sx-award-row-media">
+          <img src="{{ award.image | relative_url }}" alt="{{ award.title }}" loading="lazy" data-zoomable>
+        </div>
+      {% else %}
+        <div class="sx-award-row-media sx-award-row-icon" aria-hidden="true">
+          <i class="{{ award.icon | default: 'fa-solid fa-award' }}"></i>
+        </div>
+      {% endif %}
+      <div class="sx-award-row-body">
+        <span class="sx-award-date">{{ award.date }}</span>
+        <h3 class="sx-award-title">{{ award.title }}</h3>
+        <p class="sx-award-org">{{ award.org }}</p>
+        <p class="sx-award-text">{{ award.summary }}</p>
+        {% if award.links %}
+          <p class="sx-award-links">
+            {% for l in award.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+          </p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,26 +1,5 @@
-# Service and volunteering, shown on the home page and on /service/.
+# Volunteering, shown on the home page and on /volunteering/.
 # Source: Saiful's LinkedIn volunteering entries (October 2026).
-- role: Peer Reviewer
-  org: IEEE, Elsevier, and other international journals and conferences
-  period: 2023 – Present
-  category: Education
-  icon: fa-solid fa-magnifying-glass
-  summary: Peer review for journals and conferences in artificial intelligence, machine learning, biomedicine, remote sensing, and power and energy systems.
-  items:
-    - Knowledge-Based Systems (3 papers)
-    - Computer Methods and Programs in Biomedicine (1 paper)
-    - Expert Systems with Applications (2 papers)
-    - Remote Sensing Letters (1 paper)
-    - Computational and Structural Biotechnology Journal (1 paper)
-    - IEEE Transactions on Artificial Intelligence, 2024 (1 paper)
-    - FLAIRS-39, Florida Online Journals (4 papers)
-    - IEEE International Conference on Green Industrial Electronics and Sustainable Technologies (GIEST), 2024 (2 papers)
-    - IEEE Kansas Power and Energy Conference (KPEC), 2024 (2 papers)
-    - IEEE Texas Power and Energy Conference (TPEC), 2024 (3 papers)
-    - IEEE 7th Global Power, Energy and Communication Conference (GPECOM), 2025 (1 paper)
-  links:
-    - { label: ORCID, url: "https://orcid.org/0009-0000-6880-6471" }
-
 - role: Vice President
   org: Bangladeshi Students' Association (BSA) at LSU
   period: Jun 2024 – Jun 2025

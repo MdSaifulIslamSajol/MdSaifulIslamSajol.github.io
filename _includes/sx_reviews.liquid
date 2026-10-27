@@ -1,0 +1,43 @@
+{% comment %}
+  Peer review service (site-specific include, not part of al-folio).
+  Data: _data/reviews.yml. Used on the home page and /reviews/.
+{% endcomment %}
+{% assign r = site.data.reviews %}
+{% assign n_journal = 0 %}
+{% for j in r.journals %}{% assign n_journal = n_journal | plus: j.papers %}{% endfor %}
+{% assign n_conf = 0 %}
+{% for c in r.conferences %}{% assign n_conf = n_conf | plus: c.papers %}{% endfor %}
+<div class="sx-review">
+  <div class="sx-review-head">
+    <div>
+      <span class="sx-award-date">{{ r.period }}</span>
+      <h3 class="sx-award-title">{{ r.role }}</h3>
+      <p class="sx-award-org">{{ r.org }}</p>
+      <p class="sx-award-text">{{ r.summary }}</p>
+      {% if r.orcid %}<p class="sx-award-links"><a href="{{ r.orcid }}">ORCID record</a></p>{% endif %}
+    </div>
+    <div class="sx-review-stats">
+      <div class="sx-stat"><span class="sx-stat-value">{{ n_journal | plus: n_conf }}</span><span class="sx-stat-label">papers reviewed</span></div>
+      <div class="sx-stat"><span class="sx-stat-value">{{ r.journals.size }}</span><span class="sx-stat-label">journals</span></div>
+      <div class="sx-stat"><span class="sx-stat-value">{{ r.conferences.size }}</span><span class="sx-stat-label">conferences</span></div>
+    </div>
+  </div>
+  <div class="sx-review-cols">
+    <div>
+      <h4 class="sx-subhead">Journals</h4>
+      <ul class="sx-review-list">
+        {% for j in r.journals %}
+          <li><span>{{ j.venue }}</span><span class="sx-count">{{ j.papers }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h4 class="sx-subhead">Conferences</h4>
+      <ul class="sx-review-list">
+        {% for c in r.conferences %}
+          <li><span>{{ c.venue }}</span><span class="sx-count">{{ c.papers }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

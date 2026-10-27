@@ -240,50 +240,36 @@ layout: default
       <h2 id="awards-title" class="sx-title"><span class="sx-num">05</span> Honors and Awards</h2>
       <a class="sx-more" href="{{ '/awards/' | relative_url }}">awards page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </header>
-    <div class="sx-awards">
-      {% for award in site.data.awards %}
-        <article class="sx-award">
-          {% if award.image %}
-            <div class="sx-award-media">
-              <img src="{{ award.image | relative_url }}" alt="{{ award.title }}" loading="lazy" data-zoomable>
-            </div>
-          {% else %}
-            <div class="sx-award-media sx-award-icon" aria-hidden="true"><i class="{{ award.icon | default: 'fa-solid fa-award' }}"></i></div>
-          {% endif %}
-          <div class="sx-award-body">
-            <span class="sx-award-date">{{ award.date }}</span>
-            <h3 class="sx-award-title">{{ award.title }}</h3>
-            <p class="sx-award-org">{{ award.org }}</p>
-            <p class="sx-award-text">{{ award.summary }}</p>
-            {% if award.links %}
-              <p class="sx-award-links">
-                {% for l in award.links %}
-                  <a href="{{ l.url }}">{{ l.label }}</a>
-                {% endfor %}
-              </p>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
-    </div>
+    {% include sx_awards.liquid %}
   </section>
 
-  <!-- ============================== SERVICE & VOLUNTEERING ============================== -->
-  {% if site.data.volunteering %}
-    <section id="service" class="sx-section" aria-labelledby="service-title">
+  <!-- ============================== PEER REVIEW ============================== -->
+  {% if site.data.reviews %}
+    <section id="reviews" class="sx-section" aria-labelledby="reviews-title">
       <header class="sx-section-head">
-        <h2 id="service-title" class="sx-title"><span class="sx-num">06</span> Service and Volunteering</h2>
-        <a class="sx-more" href="{{ '/service/' | relative_url }}">service page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <h2 id="reviews-title" class="sx-title"><span class="sx-num">06</span> Peer Review</h2>
+        <a class="sx-more" href="{{ '/reviews/' | relative_url }}">reviews page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      {% include sx_reviews.liquid %}
+    </section>
+  {% endif %}
+
+  <!-- ============================== VOLUNTEERING ============================== -->
+  {% if site.data.volunteering %}
+    <section id="volunteering" class="sx-section" aria-labelledby="volunteering-title">
+      <header class="sx-section-head">
+        <h2 id="volunteering-title" class="sx-title"><span class="sx-num">07</span> Volunteering</h2>
+        <a class="sx-more" href="{{ '/volunteering/' | relative_url }}">volunteering page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </header>
       {% include sx_volunteering.liquid %}
     </section>
   {% endif %}
 
-  <!-- ============================== MOMENTS (PHOTOS) ============================== -->
+  <!-- ============================== PHOTOS ============================== -->
   {% if site.data.gallery %}
-    <section id="moments" class="sx-section" aria-labelledby="moments-title">
+    <section id="photos" class="sx-section" aria-labelledby="photos-title">
       <header class="sx-section-head">
-        <h2 id="moments-title" class="sx-title"><span class="sx-num">07</span> Moments</h2>
+        <h2 id="photos-title" class="sx-title"><span class="sx-num">08</span> Photos</h2>
       </header>
       <div class="sx-gallery">
         {% for photo in site.data.gallery %}
@@ -300,7 +286,7 @@ layout: default
   {% if page.latest_posts and page.latest_posts.enabled %}
     <section id="blog" class="sx-section" aria-labelledby="blog-title">
       <header class="sx-section-head">
-        <h2 id="blog-title" class="sx-title"><span class="sx-num">08</span> Blog</h2>
+        <h2 id="blog-title" class="sx-title"><span class="sx-num">09</span> Blog</h2>
         <a class="sx-more" href="{{ '/blog/' | relative_url }}">all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </header>
       <div class="sx-posts">
@@ -328,7 +314,7 @@ layout: default
   <!-- ============================== CONTACT ============================== -->
   <section id="contact" class="sx-section sx-contact" aria-labelledby="contact-title">
     <header class="sx-section-head">
-      <h2 id="contact-title" class="sx-title"><span class="sx-num">09</span> Contact</h2>
+      <h2 id="contact-title" class="sx-title"><span class="sx-num">10</span> Contact</h2>
     </header>
     <p class="sx-lead">{{ site.contact_note }}</p>
     <div class="sx-contact-grid">

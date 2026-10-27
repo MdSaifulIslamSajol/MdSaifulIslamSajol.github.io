@@ -1,0 +1,20 @@
+# Peer review service, shown on the home page and on /reviews/.
+# Source: Saiful's LinkedIn volunteering entry (October 2026).
+role: Peer Reviewer
+org: IEEE, Elsevier, and other international journals and conferences
+period: 2023 – Present
+summary: Peer review for journals and conferences in artificial intelligence, machine learning, biomedicine, remote sensing, and power and energy systems.
+orcid: https://orcid.org/0009-0000-6880-6471
+journals:
+  - { venue: "Knowledge-Based Systems", papers: 3 }
+  - { venue: "Computer Methods and Programs in Biomedicine", papers: 1 }
+  - { venue: "Expert Systems with Applications", papers: 2 }
+  - { venue: "Remote Sensing Letters", papers: 1 }
+  - { venue: "Computational and Structural Biotechnology Journal", papers: 1 }
+  - { venue: "IEEE Transactions on Artificial Intelligence, 2024", papers: 1 }
+conferences:
+  - { venue: "FLAIRS-39, Florida Online Journals", papers: 4 }
+  - { venue: "IEEE International Conference on Green Industrial Electronics and Sustainable Technologies (GIEST), 2024", papers: 2 }
+  - { venue: "IEEE Kansas Power and Energy Conference (KPEC), 2024", papers: 2 }
+  - { venue: "IEEE Texas Power and Energy Conference (TPEC), 2024", papers: 3 }
+  - { venue: "IEEE 7th Global Power, Energy and Communication Conference (GPECOM), 2025", papers: 1 }

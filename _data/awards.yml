@@ -46,7 +46,7 @@
 - title: Best Poster Runner-Up Award
   org: SIAM International Conference on Data Mining (SDM)
   date: "2024"
-  icon: fa-solid fa-award
+  image: assets/img/award_sdm_best_poster.jpg
   summary: >
     Awarded for COMBOOD, a semiparametric approach for detecting out-of-distribution data for image classification.
   links:
