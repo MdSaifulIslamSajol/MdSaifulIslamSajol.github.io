@@ -1,0 +1,253 @@
+---
+---
+
+% Publications of Md Saiful Islam Sajol.
+% Every DOI below was checked against the DOI printed in the published PDF.
+% "selected = {true}" marks papers highlighted at the top of the home page.
+% "preview" images live in assets/img/publication_preview/.
+
+% ---------------------------------------------------------------------------
+% Manuscripts in preparation / under review
+% ---------------------------------------------------------------------------
+
+@unpublished{sajol2026cisgpt,
+  abbr        = {Preprint},
+  title       = {CisGPT: Plan-then-Fill Design of Cis-Regulatory DNA Generalises across Plant, Fungal and Human Regulatory Grammars},
+  author      = {Sajol, Md Saiful Islam and others},
+  note        = {Manuscript in preparation},
+  year        = {2026},
+  bibtex_show = {true},
+}
+
+@unpublished{sajol2026mopt,
+  abbr        = {Preprint},
+  title       = {Multiple Objective Path Tracking (MOPT): A Physics-Guided Navigation-Based Framework for Alternate Drug Inhibitor Discovery in Chemical Embedding Space},
+  author      = {Sajol, Md Saiful Islam and others},
+  note        = {Manuscript in preparation for the Journal of Chemical Information and Modeling},
+  year        = {2026},
+  preview     = {mopt.jpg},
+  bibtex_show = {true},
+}
+
+@unpublished{sajol2026carcm,
+  abbr        = {AI Agric.},
+  title       = {CARCM: A Context-Aware Rice Cis-Regulatory Motif Framework for Predicting Drought-Responsive Gene Regulation},
+  author      = {Sajol, Md Saiful Islam and Rajasekaran, Magesh and Alvin, Chris and Mukhopadhyay, Supratik and Subudhi, Prasanta K.},
+  note        = {Submitted to Artificial Intelligence in Agriculture},
+  year        = {2026},
+  code        = {https://github.com/MdSaifulIslamSajol/CARCM},
+  preview     = {carcm.jpg},
+  abstract    = {Rice feeds more than half the world, yet drought remains one of the biggest threats to its yield. Drought stress triggers widespread differential expression, up-regulating some genes and down-regulating others. Whether a gene responds depends not just on its DNA sequence, but on which variety of rice it comes from, which tissue is under stress, and what stage of growth the plant has reached. Existing models largely ignore this context, treating gene regulation as a fixed property of the sequence alone. We propose CARCM, a model that reads known regulatory signals in rice promoter sequences and combines them with the biological context: variety, tissue, and developmental stage through a gated attention mechanism. Trained on 44,502 gene expression records drawn from 13 rice varieties, 8 tissues, and 6 developmental stages, CARCM achieves an AUC of 0.852 and an F1 of 0.791, outperforming 12 classical and deep learning baselines and 8 DNA foundation models, including plant-specific ones. Ablation experiments show that removing biological context drops performance by 0.232 AUC, and on three tissue types, the sequence alone performs worse than random guessing. These results show that drought-responsive gene regulation in rice is governed by context-dependent cis-regulatory grammar, and explicit biological conditioning is a core requirement for predicting how rice genes respond to drought. We further show that the framework transfers across stresses: a drought-pretrained CARCM encoder reused on a smaller salt-stress dataset raises test AUC from 0.652 (training on salt alone) to 0.829, indicating that the approach generalizes beyond drought and is effective in low-data settings.},
+  selected    = {true},
+  bibtex_show = {true},
+}
+
+@unpublished{sajol2026gatedfusion,
+  abbr        = {BigData},
+  title       = {Drought-Responsive Gene Regulation Prediction in Multi-Variety Rice Using Promoter Motif Counts and Biological Context Embeddings},
+  author      = {Sajol, Md Saiful Islam and Rajasekaran, Magesh and Mukhopadhyay, Supratik and Alvin, Chris and Subudhi, Prasanta},
+  note        = {Submitted to the TADD-Climate 2026 workshop, IEEE International Conference on Big Data (IEEE BigData 2026)},
+  year        = {2026},
+  code        = {https://github.com/MdSaifulIslamSajol/Drought-Responsive-Rice-Gene-Regulation-Prediction},
+  abstract    = {We address the binary classification problem of predicting drought-responsive gene regulation direction (up- vs. down-regulated) in rice from 1,000 bp promoter sequences and biological context metadata. We use 44,502 samples from the RiceMetaSys database consisting of 13 rice varieties, 8 tissue types, and 6 developmental stages. We engineer an 85-dimensional feature vector combining counts of 54 known cis-regulatory motifs, four compositional sequence statistics, and one-hot-encoded biological context. We propose GatedFusion, a bidirectional LSTM with a learned sigmoid gate that dynamically weights motif representations against biological context embeddings, and evaluate it against six baseline architectures. A custom HierarchicalFocalLoss addresses simultaneous class and condition imbalance arising from the highly skewed variety distribution. GatedFusion achieves the best Matthews Correlation Coefficient (MCC = 0.4213) and Precision (0.7335) on the held-out test set, with ROC-AUC = 0.7815 and PR-AUC = 0.8029. A top-k variety selection analysis identifies all 13 varieties as the optimal training configuration (AUC = 0.7958). A controlled context-sensitivity experiment on 551 test promoters appearing under multiple biological contexts confirms that GatedFusion adjusts its predictions correctly when biological context genuinely changes the regulation direction.},
+  bibtex_show = {true},
+}
+
+% ---------------------------------------------------------------------------
+% Published
+% ---------------------------------------------------------------------------
+
+@article{sajol2026dpeb,
+  abbr        = {NAR GAB},
+  title       = {A Multimodal Human Protein Embeddings Database: DeepDrug Protein Embeddings Bank (DPEB)},
+  author      = {Sajol, Md Saiful Islam and Rajasekaran, Magesh and Gemeinhardt, Hayden and Bess, Adam and Alvin, Chris and Mukhopadhyay, Supratik},
+  journal     = {NAR Genomics and Bioinformatics},
+  volume      = {8},
+  number      = {2},
+  pages       = {lqag042},
+  year        = {2026},
+  doi         = {10.1093/nargab/lqag042},
+  html        = {https://doi.org/10.1093/nargab/lqag042},
+  code        = {https://github.com/deepdrugai/DPEB},
+  website     = {https://registry.opendata.aws/deepdrug-dpeb/},
+  preview     = {dpeb.jpg},
+  abstract    = {Computationally predicting protein-protein interactions (PPIs) is challenging due to the lack of integrated, multimodal protein representations. DeepDrug Protein Embeddings Bank (DPEB) is a curated collection of 22 043 human proteins that integrates four embedding types: structural (AlphaFold2), transformer-based sequence (BioEmbeddings), contextual amino acid patterns (ESM-2: Evolutionary Scale Modeling), and sequence-based n-gram statistics (ProtVec). AlphaFold2 protein structures are available through public databases (e.g. AlphaFold2 Protein Structure Database), but the internal neural network embeddings are not. DPEB addresses this gap by providing AlphaFold2-derived embeddings for computational modeling. Our benchmark evaluations show GraphSAGE with BioEmbedding achieved the highest PPI prediction performance (87.37\% AUROC, 79.16\% accuracy). The framework also achieved 77.42\% accuracy for enzyme classification and 86.04\% accuracy for protein family classification. DPEB supports multiple graph neural network methods for PPI prediction, enabling applications in systems biology, drug target identification, pathway analysis, and disease mechanism studies.},
+  additional_info = {. Data on the [AWS Open Data Registry](https://registry.opendata.aws/deepdrug-dpeb/); archived on [Zenodo](https://doi.org/10.5281/zenodo.19008090)},
+  selected    = {true},
+  bibtex_show = {true},
+}
+
+@inproceedings{berglind2026xood,
+  abbr        = {ICANN},
+  title       = {XOOD: A Self-Supervised Algorithm for Detecting Out-of-Distribution Data for Image Classification},
+  author      = {Berglind, Frej and Rajasekaran, Magesh and Sajol, Md Saiful Islam and Temam, Haron and Mukhopadhyay, Supratik and Das, Kamalika and Kumar, Sricharan and Kallurupalli, Kumar},
+  booktitle   = {Artificial Neural Networks and Machine Learning -- ICANN 2025, Lecture Notes in Computer Science, vol. 16068},
+  publisher   = {Springer},
+  pages       = {521--532},
+  year        = {2026},
+  doi         = {10.1007/978-3-032-04558-4_42},
+  html        = {https://doi.org/10.1007/978-3-032-04558-4_42},
+  code        = {https://github.com/MdSaifulIslamSajol/xood-icann/},
+  award       = {Received the **ENNS Best Paper Award** at ICANN 2025, the 34th International Conference on Artificial Neural Networks (European Neural Network Society, September 2025).},
+  award_name  = {Best Paper},
+  abstract    = {Neural Networks are known to be opaque in their decision-making process. In particular, it is known that, when encountering out-of-distribution (OOD) data, they can confidently provide an erroneous output without warning the user. It is well known that the "class probabilities" output by the softmax layer of a neural network are only weakly correlated with how confident the model should be about the prediction. Therefore, identifying out-of-distribution input data at inference time is critical for many applications of machine learning. We present XOOD: a self-supervised extreme value-based OOD detection framework for image classification. The algorithm relies on the signals captured by the extreme values of the data in the activation layers of the neural network in order to distinguish between in-distribution and OOD instances. We show experimentally that XOOD outperforms state-of-the-art OOD detection methods on many benchmark data sets in both efficiency and accuracy, reducing false-positive rate (FPR95) by 50\%, while improving the inferencing time by an order of magnitude.},
+  selected    = {true},
+  bibtex_show = {true},
+}
+
+@inproceedings{rajasekaran2025hypoxia,
+  abbr        = {BigData},
+  title       = {Benchmarking Artificial Intelligence Models for Daily Coastal Hypoxia Forecasting},
+  author      = {Rajasekaran, Magesh and Sajol, Md Saiful Islam and Alvin, Chris and Mukhopadhyay, Supratik and Ou, Yanda and Xue, Z. George},
+  booktitle   = {2025 IEEE International Conference on Big Data (BigData)},
+  year        = {2025},
+  doi         = {10.1109/BIGDATA66926.2025.11402646},
+  html        = {https://doi.org/10.1109/BIGDATA66926.2025.11402646},
+  code        = {https://github.com/rmagesh148/hypoxia-ai/},
+  abstract    = {Coastal hypoxia, especially in the northern part of Gulf of Mexico, presents a persistent ecological and economic concern. Seasonal models offer coarse forecasts that miss the fine-scale variability needed for daily, responsive ecosystem management. We present a study that compares four deep learning architectures for daily hypoxia classification: Bidirectional Long Short-Term Memory (BiLSTM), Medformer (Medical Transformer), Spatio-Temporal Transformer (ST-Transformer), and Temporal Convolutional Network (TCN). Our training data consists of 2009-2020 hindcast data from a coupled hydrodynamic-biogeochemical model. Similarly, we use hindcast data from 2020 through 2024 as test data. We constructed classification models incorporating water column stratification, sediment oxygen consumption, and temperature-dependent decomposition rates. We evaluated each architecture using the same data preprocessing, input/output formulation, and validation protocols. Each model achieved high classification accuracy and strong discriminative ability with ST-Transformer achieving the highest performance across all metrics and test periods (AUC-ROC: 0.982-0.992). We also employed McNemar's method to identify statistically significant differences in model predictions. Our contribution is a reproducible framework for operational real-time hypoxia prediction that can support broader efforts in the environmental and ocean modeling systems community and in ecosystem resilience.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2025pneumonia,
+  abbr        = {ICAIIC},
+  title       = {A Deep Dive into Vision Models: Comparing CNN and Transformer-Based Approaches for Pneumonia Detection},
+  author      = {Sajol, Md Saiful Islam and Islam, Raisa and Hasan, A S M Jahid and Kabir, Mainul},
+  booktitle   = {2025 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), Japan},
+  year        = {2025},
+  doi         = {10.1109/ICAIIC64266.2025.10920790},
+  html        = {https://doi.org/10.1109/ICAIIC64266.2025.10920790},
+  code        = {https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images},
+  abstract    = {Image classification is a fundamental computer vision task crucial for interpretation of visual data. Significant advancements have been observed in image classification models over recent years. In this paper, a taxonomy is presented categorizing image classification models into CNN, Transformer, and Hybrid models, in addition to an evaluation of these models for pneumonia detection using a chest X-ray (CXR) dataset. Key metrics such as accuracy, precision, recall, F1-score, and average inference time per image were analyzed to understand tradeoffs between performance and efficiency for most feasible model selection concerning this task. Transformer-based models, particularly SwinV2, proved their robustness for pneumonia detection, achieving the highest accuracy (95.03\%), recall (94.66\%), and F1-score (94.70\%). However, the longer inference time (133.58 ms) presents a considerable disadvantage. Although CNN models like EfficientNetB0 and ResNet50 achieved the highest precision, they underperformed in other metrics, highlighting the need for balanced evaluations. Hybrid models, such as CvT, consistently performed well across all metrics, showcasing the potential of transformers integrated with convolutional layers. However, no single model category demonstrated unanimous superiority, as CNN models exhibited much faster temporal efficiency than Transformer and Hybrid models.},
+  bibtex_show = {true},
+}
+
+@inproceedings{ranjan2024kgdta,
+  abbr        = {AIMLSys},
+  title       = {KG-DTA: A Knowledge Graph-Based Meta-Path Learning Framework to Predict Drug-Target Binding Affinity},
+  author      = {Ranjan, Amit and Bess, Adam and Sajol, Md Saiful Islam and Rajasekaran, Magesh and Alvin, Chris and Mukhopadhyay, Supratik},
+  booktitle   = {4th International Conference on AI-ML Systems (AIMLSystems 2024), Baton Rouge, LA, USA},
+  publisher   = {ACM},
+  year        = {2024},
+  doi         = {10.1145/3703412.3703426},
+  html        = {https://doi.org/10.1145/3703412.3703426},
+  abstract    = {Drug target affinity (DTA) prediction is essential at different phases of drug discovery and virtual drug screening. However, traditional wet lab experiments are time and resource-intensive owing to the complex interactions within the vast biological and chemical spaces. Computational methods have proven their potential to predict DTA, but none have considered the association of drugs and proteins to capture the complex interactions in the biological network between drugs and proteins. To address this, we propose a novel framework leveraging knowledge graph-based meta-path learning (KG-DTA) to enhance DTA prediction. First, we construct a weighted heterogeneous network of drugs and proteins that incorporates three types of entities: drug-drug similarity, protein-protein similarity, and drug-protein affinity scores. Node features of both drugs and proteins in this network are enriched using embeddings from pretrained models. The meta-path learning technique extracts meaningful pathways within the network by focusing on paths from drug nodes to protein nodes, and a path length restricted to 2 or 3. This strategy yields 6 distinct pathways that capture intricate relationships between drugs and proteins. Finally, the XGBoost-based machine learning algorithm is used to predict the binding affinity score. Experimentally, we used two standard benchmark datasets: Davis and Kiba to evaluate KG-DTA. Experiments show that our method significantly surpasses the performance of state-of-the-art techniques, achieving mean square errors of 0.23 and 0.11 on the Davis and Kiba datasets, respectively.},
+  bibtex_show = {true},
+}
+
+@inproceedings{rajasekaran2024combood,
+  abbr        = {SDM},
+  title       = {COMBOOD: A Semiparametric Approach for Detecting Out-of-Distribution Data for Image Classification},
+  author      = {Rajasekaran, Magesh and Sajol, Md Saiful Islam and Berglind, Frej and Mukhopadhyay, Supratik and Das, Kamalika},
+  booktitle   = {Proceedings of the 2024 SIAM International Conference on Data Mining (SDM), Texas, USA},
+  publisher   = {SIAM},
+  pages       = {643--651},
+  year        = {2024},
+  doi         = {10.1137/1.9781611978032.74},
+  arxiv       = {2602.07042},
+  award       = {**Best Poster Runner-Up Award** at the SIAM International Conference on Data Mining (SDM), 2024.},
+  award_name  = {Best Poster Runner-Up},
+  abstract    = {Identifying out-of-distribution (OOD) data at inference time is crucial for many machine learning applications, especially for automation. We present a novel unsupervised semi-parametric framework COMBOOD for OOD detection with respect to image recognition. Our framework combines signals from two distance metrics, nearest-neighbor and Mahalanobis, to derive a confidence score for an inference point to be out-of-distribution. The former provides a non-parametric approach to OOD detection. The latter provides a parametric, simple, yet effective method for detecting OOD data points, especially, in the far OOD scenario, where the inference point is far apart from the training data set in the embedding space. However, its performance is not satisfactory in the near OOD scenarios that arise in practical situations. Our COMBOOD framework combines the two signals in a semi-parametric setting to provide a confidence score that is accurate both for the near-OOD and far-OOD scenarios. We demonstrate experimentally that COMBOOD outperforms state-of-the-art OOD detection methods on the OpenOOD (both version 1 and most recent version 1.5) benchmark datasets (for both far-OOD and near-OOD) as well as on the documents dataset in terms of accuracy. COMBOOD scales linearly with the size of the embedding space, making it ideal for many real-life applications.},
+  selected    = {true},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024braintumor,
+  abbr        = {IEEE IS},
+  title       = {Benchmarking CNN and Cutting-Edge Transformer Models for Brain Tumor Classification through Transfer Learning},
+  author      = {Sajol, Md Saiful Islam and Hasan, A S M Jahid},
+  booktitle   = {2024 IEEE 12th International Conference on Intelligent Systems (IS), Bulgaria},
+  year        = {2024},
+  doi         = {10.1109/IS61756.2024.10705175},
+  html        = {https://doi.org/10.1109/IS61756.2024.10705175},
+  code        = {https://github.com/MdSaifulIslamSajol/brain-tumor-detection},
+  abstract    = {Brain tumor is a serious disease that can lead to fatal consequences. Moreover, there are different types of brain tumor with different progression rate and severeness. Thus, brain tumor classification is an essential task in medical diagnosis. Convolutional Neural Network (CNN) based deep learning methods have shown great potential for brain tumor classification using Magnetic Resonance Imaging (MRI) scans of the brain. Recent developments in transformer based deep learning models have shown promising outcomes in image classification tasks. However, these models have not yet been much explored in the application of brain tumor classification. In this paper, we employ seven advanced models which utilize transformers or mimic the self-attention operation of transformers through their design, for brain tumor classification. To assess their performance for this particular task, five conventional CNN based methods have also been applied and compared with these models. To make our assessment more coherent and comprehensive we perform the comparison for four different datasets. The results indicate that transformer-based advanced models do not provide a distinct advantage over conventional CNN-based models. The CNN-based ResNet-50 performs well overall, especially with smaller datasets. For larger datasets, transformer-based models generally perform better than CNN-based models, although the difference is not significant.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024skincancer,
+  abbr        = {EECSI},
+  title       = {Performance Assessment of Advanced CNN and Transformer Architectures in Skin Cancer Detection},
+  author      = {Sajol, Md Saiful Islam and Alvi, S. T. and Era, C. A. A.},
+  booktitle   = {2024 11th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI), Indonesia},
+  year        = {2024},
+  doi         = {10.1109/EECSI63442.2024.10776508},
+  html        = {https://doi.org/10.1109/EECSI63442.2024.10776508},
+  code        = {https://github.com/MdSaifulIslamSajol/skin-cancer-detection},
+  abstract    = {Skin cancer has always been one of the most common types of cancer in medical history. To find skin problems early, it is necessary to have a reliable automated method for recognizing them. Our study is based on the HAM10000 dataset, which is made up of 10015 different dermatoscopic pictures of common pigmented skin lesions from different sources. The newest deep learning techniques, such as Convolutional Neural Networks (CNN), Transformers, and Hybrid models, i.e., ConvNeXt V2, SwinV2, ViT2, CvT, DenseNet, ResNet, PVTv2, EfficientNet, EfficientFormer, VGG, MobileNet, MobileViTV2, GoogLeNet, are all compared in this study to see which one is better for automatically detecting skin cancer lesions. We found the best model for identifying skin lesions by determining its accuracy, F1-score, inference time, and confusion matrix. Among our implemented models, the ConvNeXt V2 model has an accuracy of 93.2\% with the lowest inference time.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024convnextv2,
+  abbr        = {CITDS},
+  title       = {A ConvNeXt V2 Approach to Document Image Analysis: Enhancing High-Accuracy Classification},
+  author      = {Sajol, Md Saiful Islam and Hasan, A S M Jahid and Islam, Md Shazid and Rahman, Md Saydur},
+  booktitle   = {2024 IEEE 3rd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary},
+  year        = {2024},
+  doi         = {10.1109/CITDS62610.2024.10791343},
+  html        = {https://doi.org/10.1109/CITDS62610.2024.10791343},
+  code        = {https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2},
+  abstract    = {Proper classification of documents is of tremendous importance for an organization. As digital copies of documents are now available due to technological advances, it has become convenient to classify them automatically using machine learning or deep learning algorithms. Deep CNNs have been widely applied for document image classification, whereas newly introduced transformer-based models have also presented favorable outcomes. In this paper, one of the advanced and very high-performing deep CNN models, ConvNeXt V2, developed very recently, has been adapted for the document image classification task, which leverages the imitation of the self-attention mechanism of transformers through the use of masked autoencoders. Prior studies have suggested that models pre-trained on ImageNet may not perform optimally when directly applied to document classification tasks. Nevertheless, our findings reveal substantial enhancements in performance using ConvNeXt V2, indicating that further domain-specific pre-training (for instance, on the RVL-CDIP dataset) might not be essential for attaining high accuracy. The model has been applied to one of the most standard document image classification datasets, Tobacco-3482. The results show a high overall accuracy of 92.25\% with fast convergence, outperforming several other state-of-the-art methods.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024tweeteval,
+  abbr        = {ISMSIT},
+  title       = {Transforming Social Media Analysis: TweetEval Benchmarking with Advanced Transformer Models},
+  author      = {Sajol, Md Saiful Islam and Hasan, A S M Jahid and Islam, Md Shazid and Rahman, Md Saydur},
+  booktitle   = {2024 8th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT), Turkey},
+  year        = {2024},
+  doi         = {10.1109/ISMSIT63511.2024.10757178},
+  html        = {https://doi.org/10.1109/ISMSIT63511.2024.10757178},
+  code        = {https://github.com/MdSaifulIslamSajol/benchamarking_Tweeteval_datasets},
+  abstract    = {X (formerly Twitter) is one of the most popular social media platforms globally, where users interact through short messages known as Tweets. The platform's vast user base and specific rules and limitations present unique opportunities and challenges for Natural Language Processing (NLP) tasks, particularly in Tweet classification. The rapid advancement of transformer-based deep learning models has introduced numerous sophisticated models. In this work, we apply several of these models: BERT, RoBERTa, DistilBERT, Electra, GPT-2, Longformer, Luke, T5, and XLNet. We utilize the TweetEval benchmark, a standard developed by researchers for various Tweet classification tasks, and compare our results with other state-of-the-art approaches. We experiment with learning rates ranging from 1e-3 to 1e-6 and two different loss functions, Negative Log-Likelihood (NLL) and Cross Entropy (CE), to determine the best-performing combinations. Our findings show that our top models for emoji and offensive language detection surpass all other works. Additionally, our best-performing models exceed the TweetEval results in all tasks except for hate speech detection, sentiment analysis, and stance detection, where our results remain very close to the TweetEval benchmark.},
+  bibtex_show = {true},
+}
+
+@inproceedings{hasan2024buildingload,
+  abbr        = {EPEi},
+  title       = {Deep Learning Based Cross-Location Building Load Prediction Using Domain Adaptation},
+  author      = {Hasan, A S M Jahid and Islam, Md Shazid and Rahman, Md Saydur and Sajol, Md Saiful Islam and Yusuf, Jubair},
+  booktitle   = {2024 IEEE International Conference and Exposition on Electric and Power Engineering (EPEi), Romania},
+  year        = {2024},
+  doi         = {10.1109/EPEi63510.2024.10758045},
+  html        = {https://doi.org/10.1109/EPEi63510.2024.10758045},
+  abstract    = {Buildings consume a significant portion of a nation's total energy, accounting for about 70 percent of electricity use in the US. Predicting building energy demand accurately is crucial for utilities to ensure efficient operation. Deep learning-based approaches have demonstrated great potential for this task. However, building loads are heavily influenced by local weather conditions. Conventional deep learning models are typically location-specific and demand extensive local data for accurate predictions. A location independent model can offer great advantage, which can be attained through application of domain adaptation. This study applies domain adaptation techniques to develop a deep learning model that predicts building energy demand independent of location. Our proposed model uses a pre-trained deep learning architecture trained on data from one location to predict building load in another location, requiring only minimal data from the target domain. The findings demonstrate that the domain-adapted model achieves improvements in both accuracy and computational speed compared to non-adapted models.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024energytheft,
+  abbr        = {KPEC},
+  title       = {Synthetic Minority Oversampling Technique Enhanced Machine Learning Models for Energy Theft Detection},
+  author      = {Sajol, Md Saiful Islam and Ahmed, Imtiaz and Mahmud, Quazi Sanjid},
+  booktitle   = {2024 IEEE Kansas Power and Energy Conference (KPEC), Kansas, USA},
+  year        = {2024},
+  doi         = {10.1109/KPEC61529.2024.10676105},
+  html        = {https://doi.org/10.1109/KPEC61529.2024.10676105},
+  abstract    = {Electricity theft poses significant challenges to utility companies worldwide, resulting in substantial financial losses. This study addresses the problem by leveraging machine learning algorithms to detect energy theft in smart grids. The insufficiency of data on theft conditions and the imbalance of datasets have always hindered the precise identification of fraudulent activity. To mitigate these challenges, we curated a dataset from the Open Energy Data Initiative, which encompasses sixteen consumer categories and six theft conditions. Our approach focuses on using the Synthetic Minority Oversampling Technique (SMOTE) to address class imbalance by generating synthetic samples for minority classes. We conducted a comparative analysis of various machine learning based classification algorithms, including K-Nearest Neighbors (KNN), Decision Tree, Random Forest (RF), Bagging with RF, and Ensemble Learning, and observed the results before and after the implementation of SMOTE on the dataset. We find that SMOTE demonstrates its most significant impact on classifying the most challenging classes within the dataset. In particular, it shows improvements of 57.00\%, 37.88\%, and 36.88\% for Class 6, Class 1, and Class 3, respectively, with the KNN algorithm. Overall, this research contributes to advancing energy security by highlighting the importance of robust theft detection frameworks for safeguarding energy distribution systems.},
+  bibtex_show = {true},
+}
+
+@inproceedings{sajol2024windpower,
+  abbr        = {GPECOM},
+  title       = {Wind Power Prediction across Different Locations Using Deep Domain Adaptive Learning},
+  author      = {Sajol, Md Saiful Islam and Islam, Md Shazid and Hasan, A S M Jahid and Rahman, Md Saydur and Yusuf, Jubair},
+  booktitle   = {2024 IEEE 6th Global Power, Energy and Communication Conference (GPECOM), Hungary},
+  year        = {2024},
+  doi         = {10.1109/GPECOM61896.2024.10582569},
+  html        = {https://doi.org/10.1109/GPECOM61896.2024.10582569},
+  code        = {https://github.com/MdSaifulIslamSajol/wind_power_domain_adaptation},
+  abstract    = {Accurate prediction of wind power is essential for the grid integration of this intermittent renewable source and aiding grid planners in forecasting available wind capacity. Spatial differences lead to discrepancies in climatological data distributions between two geographically dispersed regions, consequently making the prediction task more difficult. Thus, a prediction model that learns from the data of a particular climatic region can suffer from being less robust. A deep neural network (DNN) based domain adaptive approach is proposed to counter this drawback. Effective weather features from a large set of weather parameters are selected using a random forest approach. A pre-trained model from the source domain is utilized to perform the prediction task, assuming no source data is available during target domain prediction. The weights of only the last few layers of the DNN model are updated throughout the task, keeping the rest of the network unchanged, making the model faster compared to the traditional approaches. The proposed approach demonstrates higher accuracy ranging from 6.14\% to even 28.44\% compared to the traditional non-adaptive method.},
+  bibtex_show = {true},
+}
+
+@inproceedings{islam2023solar,
+  abbr        = {ETFG},
+  title       = {Location Agnostic Source-Free Domain Adaptive Learning to Predict Solar Power Generation},
+  author      = {Islam, Md Shazid and Hasan, A S M Jahid and Rahman, Md Saydur and Yusuf, Jubair and Sajol, Md Saiful Islam and Tumpa, Farhana Akter},
+  booktitle   = {2023 IEEE International Conference on Energy Technologies for Future Grids (ETFG), Wollongong, Australia},
+  year        = {2023},
+  doi         = {10.1109/ETFG55873.2023.10407265},
+  html        = {https://doi.org/10.1109/ETFG55873.2023.10407265},
+  abstract    = {The prediction of solar power generation is a challenging task due to its dependence on climatic characteristics that exhibit spatial and temporal variability. The performance of a prediction model may vary across different places due to changes in data distribution, resulting in a model that works well in one region but not in others. Furthermore, as a consequence of global warming, there is a notable acceleration in the alteration of weather patterns on an annual basis. In this paper, a domain adaptive deep learning-based framework is proposed to estimate solar power generation using weather features that can solve the aforementioned challenges. A feedforward deep convolutional network model is trained for a known location dataset in a supervised manner and utilized to predict the solar power of an unknown location later. This adaptive data-driven approach exhibits notable advantages in terms of computing speed, storage efficiency, and its ability to improve outcomes in scenarios where state-of-the-art non-adaptive methods fail. Our method has shown an improvement of 10.47\%, 7.44\%, 5.11\% in solar power prediction accuracy compared to the best performing non-adaptive method for California (CA), Florida (FL) and New York (NY), respectively.},
+  bibtex_show = {true},
+}

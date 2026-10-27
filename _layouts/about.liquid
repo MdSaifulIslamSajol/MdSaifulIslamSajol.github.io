@@ -1,0 +1,344 @@
+---
+layout: default
+---
+{% comment %}
+  Local override of al_folio_core's about layout (al_folio_core 1.0.15).
+  Turns the home page into one long page: every main section (news, projects,
+  publications, awards, experience, moments, blog, contact) is rendered here,
+  one after another, so visitors can scroll through everything. The navbar
+  links (see _includes/header.liquid) scroll to these sections, and
+  assets/custom/sections.js highlights the section currently in view.
+  Each section keeps a "view all" link to its standalone page.
+{% endcomment %}
+<link rel="stylesheet" href="{{ '/assets/custom/sections.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+<div class="sx-home" data-sx-home>
+  <!-- ============================== ABOUT / HERO ============================== -->
+  <section id="about" class="sx-section sx-hero" aria-label="About">
+    <div class="sx-hero-grid">
+      <div class="sx-hero-text">
+        <p class="sx-eyebrow">Hello, I am</p>
+        <h1 class="sx-name">
+          {{ site.first_name }}
+          <span class="sx-name-accent">{{ site.last_name }}</span>
+        </h1>
+        <p class="sx-subtitle">{{ page.subtitle }}</p>
+        {% if page.hero %}
+          <ul class="sx-meta">
+            {% if page.hero.role %}
+              <li><i class="fa-solid fa-flask" aria-hidden="true"></i> {{ page.hero.role }}</li>
+            {% endif %}
+            {% if page.hero.advisor %}
+              <li><i class="fa-solid fa-user-graduate" aria-hidden="true"></i> {{ page.hero.advisor }}</li>
+            {% endif %}
+            {% if page.hero.location %}
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ page.hero.location }}</li>
+            {% endif %}
+          </ul>
+        {% endif %}
+
+        <div class="sx-actions">
+          {% if site.data.socials.email %}
+            <a class="sx-btn sx-btn-primary" href="mailto:{{ site.data.socials.email }}"
+              ><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a
+            >
+          {% endif %}
+          {% if site.data.socials.scholar_userid %}
+            <a class="sx-btn" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+              ><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a
+            >
+          {% endif %}
+          {% if site.data.socials.github_username %}
+            <a class="sx-btn" href="https://github.com/{{ site.data.socials.github_username }}"
+              ><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a
+            >
+          {% endif %}
+          {% if site.data.socials.linkedin_username %}
+            <a class="sx-btn" href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}"
+              ><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a
+            >
+          {% endif %}
+          <a class="sx-btn" href="{{ '/cv/' | relative_url }}"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> CV</a>
+        </div>
+      </div>
+
+      {% if page.profile and page.profile.image %}
+        <div class="sx-hero-photo">
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class="sx-portrait" sizes="(min-width: 768px) 320px, 70vw"
+            alt="Portrait of Md Saiful Islam Sajol" cache_bust=true
+          %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if page.highlights %}
+      <div class="sx-stats">
+        {% for h in page.highlights %}
+          <div class="sx-stat">
+            <span class="sx-stat-value">{{ h.value }}</span>
+            <span class="sx-stat-label">{{ h.label }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="sx-bio">{{ content }}</div>
+
+    {% if page.interests %}
+      <div class="sx-chips" aria-label="Research interests">
+        {% for interest in page.interests %}
+          <span class="sx-chip">{{ interest }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+
+  <!-- ============================== NEWS ============================== -->
+  {% if page.announcements and page.announcements.enabled %}
+    <section id="news" class="sx-section" aria-labelledby="news-title">
+      <header class="sx-section-head">
+        <h2 id="news-title" class="sx-title"><span class="sx-num">01</span> News</h2>
+        <a class="sx-more" href="{{ '/news/' | relative_url }}">all news <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      <ol class="sx-news">
+        {% assign news = site.news | reverse %}
+        {% for item in news limit: page.announcements.limit %}
+          <li class="sx-news-item">
+            <time class="sx-news-date" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %Y' }}</time>
+            <div class="sx-news-body">
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' }}
+              {% else %}
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+
+  <!-- ============================== PROJECTS ============================== -->
+  <section id="projects" class="sx-section" aria-labelledby="projects-title">
+    <header class="sx-section-head">
+      <h2 id="projects-title" class="sx-title"><span class="sx-num">02</span> Research Projects</h2>
+      <a class="sx-more" href="{{ '/projects/' | relative_url }}">project pages <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </header>
+    {% assign projects_page = site.pages | where: 'permalink', '/projects/' | first %}
+    {% assign categories = projects_page.display_categories %}
+    {% for category in categories %}
+      {% assign categorized_projects = site.projects | where: 'category', category | sort: 'importance' %}
+      {% if categorized_projects.size > 0 %}
+        <h3 class="sx-subhead">{{ category }}</h3>
+        <div class="sx-cards">
+          {% for project in categorized_projects %}
+            <a class="sx-card" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+              {% if project.img %}
+                <div class="sx-card-media{% if project.img_fit == 'contain' %} sx-contain{% endif %}">
+                  <img src="{{ project.img | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                </div>
+              {% else %}
+                <div class="sx-card-media sx-card-media-empty" aria-hidden="true">
+                  {% if project.icon %}<i class="{{ project.icon }}"></i>{% else %}<span>{{ project.title | slice: 0 }}</span>{% endif %}
+                </div>
+              {% endif %}
+              <div class="sx-card-body">
+                <h4 class="sx-card-title">{{ project.title }}</h4>
+                <p class="sx-card-text">{{ project.description }}</p>
+                <span class="sx-card-link">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <!-- ============================== PUBLICATIONS ============================== -->
+  <section id="publications" class="sx-section" aria-labelledby="publications-title">
+    <header class="sx-section-head">
+      <h2 id="publications-title" class="sx-title"><span class="sx-num">03</span> Publications</h2>
+      <a class="sx-more" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+        >Google Scholar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+      ></a>
+    </header>
+    <p class="sx-lead">
+      Peer-reviewed papers and manuscripts, newest first. Use the buttons on each entry for the abstract, the DOI, the code, and the
+      BibTeX.
+    </p>
+    <div class="publications">
+      {% bibliography %}
+    </div>
+  </section>
+
+  <!-- ============================== AWARDS ============================== -->
+  <section id="awards" class="sx-section" aria-labelledby="awards-title">
+    <header class="sx-section-head">
+      <h2 id="awards-title" class="sx-title"><span class="sx-num">04</span> Honors and Awards</h2>
+      <a class="sx-more" href="{{ '/awards/' | relative_url }}">awards page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </header>
+    <div class="sx-awards">
+      {% for award in site.data.awards %}
+        <article class="sx-award">
+          {% if award.image %}
+            <div class="sx-award-media">
+              <img src="{{ award.image | relative_url }}" alt="{{ award.title }}" loading="lazy" data-zoomable>
+            </div>
+          {% else %}
+            <div class="sx-award-media sx-award-icon" aria-hidden="true"><i class="{{ award.icon | default: 'fa-solid fa-award' }}"></i></div>
+          {% endif %}
+          <div class="sx-award-body">
+            <span class="sx-award-date">{{ award.date }}</span>
+            <h3 class="sx-award-title">{{ award.title }}</h3>
+            <p class="sx-award-org">{{ award.org }}</p>
+            <p class="sx-award-text">{{ award.summary }}</p>
+            {% if award.links %}
+              <p class="sx-award-links">
+                {% for l in award.links %}
+                  <a href="{{ l.url }}">{{ l.label }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ============================== EXPERIENCE & EDUCATION ============================== -->
+  {% assign cv = site.data.cv.cv %}
+  <section id="experience" class="sx-section" aria-labelledby="experience-title">
+    <header class="sx-section-head">
+      <h2 id="experience-title" class="sx-title"><span class="sx-num">05</span> Experience and Education</h2>
+      <a class="sx-more" href="{{ '/cv/' | relative_url }}">full CV <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </header>
+    <div class="sx-two-col">
+      <div>
+        <h3 class="sx-subhead">Experience</h3>
+        <ol class="sx-timeline">
+          {% for e in cv.sections.Experience %}
+            <li class="sx-tl-item">
+              <span class="sx-tl-date">
+                {{- e.start_date | date: '%b %Y' }} &ndash;
+                {% if e.end_date %}{{ e.end_date | date: '%b %Y' }}{% else %}Present{% endif -%}
+              </span>
+              <h4 class="sx-tl-title">{{ e.position }}</h4>
+              <p class="sx-tl-org">{{ e.company }}{% if e.location %} · {{ e.location }}{% endif %}</p>
+              {% if e.highlights %}
+                <ul class="sx-tl-points">
+                  {% for h in e.highlights limit: 3 %}
+                    <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+      <div>
+        <h3 class="sx-subhead">Education</h3>
+        <ol class="sx-timeline">
+          {% for e in cv.sections.Education %}
+            <li class="sx-tl-item">
+              <span class="sx-tl-date">{{ e.start_date | date: '%Y' }} &ndash; {{ e.end_date | date: '%Y' }}</span>
+              <h4 class="sx-tl-title">{{ e.studyType }} in {{ e.area }}</h4>
+              <p class="sx-tl-org">{{ e.institution }}{% if e.location %} · {{ e.location }}{% endif %}</p>
+              {% if e.highlights %}
+                <ul class="sx-tl-points">
+                  {% for h in e.highlights %}
+                    <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+
+        <h3 class="sx-subhead">Service</h3>
+        <p class="sx-small">
+          Reviewer for Knowledge-Based Systems, Computer Methods and Programs in Biomedicine, Expert Systems with Applications, IEEE
+          Transactions on Artificial Intelligence, FLAIRS-39, and IEEE GIEST, KPEC, TPEC, and GPECOM. I also help mentor undergraduate
+          students on AI research projects.
+        </p>
+
+        <h3 class="sx-subhead">Skills</h3>
+        <div class="sx-chips sx-chips-compact">
+          {% for s in cv.sections.Skills %}
+            <span class="sx-chip" title="{{ s.keywords }}"><i class="{{ s.icon }}" aria-hidden="true"></i> {{ s.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== MOMENTS (PHOTOS) ============================== -->
+  {% if site.data.gallery %}
+    <section id="moments" class="sx-section" aria-labelledby="moments-title">
+      <header class="sx-section-head">
+        <h2 id="moments-title" class="sx-title"><span class="sx-num">06</span> Moments</h2>
+      </header>
+      <div class="sx-gallery">
+        {% for photo in site.data.gallery %}
+          <figure class="sx-photo">
+            <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
+            <figcaption>{{ photo.caption }}</figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- ============================== BLOG ============================== -->
+  {% if page.latest_posts and page.latest_posts.enabled %}
+    <section id="blog" class="sx-section" aria-labelledby="blog-title">
+      <header class="sx-section-head">
+        <h2 id="blog-title" class="sx-title"><span class="sx-num">07</span> Blog</h2>
+        <a class="sx-more" href="{{ '/blog/' | relative_url }}">all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      <div class="sx-posts">
+        {% for post in site.posts limit: page.latest_posts.limit %}
+          <a class="sx-post" href="{{ post.url | relative_url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
+            <h3>{{ post.title }}</h3>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- ============================== CONTACT ============================== -->
+  <section id="contact" class="sx-section sx-contact" aria-labelledby="contact-title">
+    <header class="sx-section-head">
+      <h2 id="contact-title" class="sx-title"><span class="sx-num">08</span> Contact</h2>
+    </header>
+    <p class="sx-lead">{{ site.contact_note }}</p>
+    <div class="sx-contact-grid">
+      <a class="sx-contact-card" href="mailto:{{ site.data.socials.email }}">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <span><strong>Email</strong>{{ site.data.socials.email }}</span>
+      </a>
+      <a class="sx-contact-card" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">
+        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+        <span><strong>Google Scholar</strong>Publications and citations</span>
+      </a>
+      <a class="sx-contact-card" href="https://github.com/{{ site.data.socials.github_username }}">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <span><strong>GitHub</strong>{{ site.data.socials.github_username }}</span>
+      </a>
+      <a class="sx-contact-card" href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        <span><strong>LinkedIn</strong>Md Saiful Islam Sajol</span>
+      </a>
+    </div>
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+      </div>
+    {% endif %}
+  </section>
+</div>
+
+<script defer src="{{ '/assets/custom/sections.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

@@ -1,0 +1,195 @@
+# CV data for the /cv/ page and the "experience" section of the home page.
+# Format: RenderCV-style YAML read by the al_folio_cv plugin.
+# Source: CV_Saiful_LLNL_Computational_Biologist_ML_Postdoctoral_Researcher.pdf (October 2026).
+# Phone number and references are intentionally left out of the public site.
+
+cv:
+  name: Md Saiful Islam Sajol
+  label: Ph.D. Student in Computer Science and Engineering, Louisiana State University
+  email: msajol1@lsu.edu
+  location: Baton Rouge, LA, USA
+  website: https://mdsaifulislamsajol.github.io
+  summary: >
+    Ph.D. student at Louisiana State University (expected July 2027) working as a Graduate Research Assistant under
+    Dr. Supratik Mukhopadhyay. I develop, apply, and benchmark deep learning methods for protein and other biological data,
+    including protein-protein interaction prediction, protein embeddings from pretrained sequence and structure models,
+    regulatory genomics, and computational drug discovery, with a focus on rigorous benchmarking and openly released research software.
+    First author of eight published peer-reviewed papers.
+
+  social_networks:
+    - network: GitHub
+      username: MdSaifulIslamSajol
+    - network: LinkedIn
+      username: md-saiful-islam-sajol-22261014a
+
+  sections:
+    Education:
+      - institution: Louisiana State University
+        location: Baton Rouge, LA, USA
+        url: https://www.lsu.edu/
+        area: Computer Science and Engineering
+        studyType: Ph.D.
+        start_date: 2022-01-01
+        end_date: 2027-07-01
+        highlights:
+          - "Expected completion: July 2027"
+          - "Advisor: Dr. Supratik Mukhopadhyay"
+
+      - institution: Louisiana State University
+        location: Baton Rouge, LA, USA
+        url: https://www.lsu.edu/
+        area: Computer Science and Engineering
+        studyType: M.Sc.
+        start_date: 2023-08-01
+        end_date: 2026-05-01
+        highlights:
+          - "Advisor: Dr. Supratik Mukhopadhyay"
+          - "Thesis: bioinformatics project on predicting drought-responsive gene regulation in rice with hybrid neural networks"
+
+      - institution: South Westphalia University of Applied Sciences (Fachhochschule Südwestfalen)
+        location: Germany
+        url: https://www.fh-swf.de/
+        area: Systems Engineering and Engineering Management
+        studyType: M.Sc.
+        start_date: 2018-10-01
+        end_date: 2021-07-01
+        highlights:
+          - "Advisor: Dr. Andreas Schwung"
+          - "Thesis: unsupervised image segmentation with a CNN and SLIC refinement, extended with classifier and autoencoder branches to reduce undersegmentation ([code](https://github.com/MdSaifulIslamSajol/MSc-Thesis-Analysis-of-Unsupervised-Image-Segmentation-with-SLIC-Refinement-using-Deep-Learning))"
+
+      - institution: Bangladesh University of Engineering and Technology (BUET)
+        location: Dhaka, Bangladesh
+        url: https://www.buet.ac.bd/
+        area: Electrical and Electronic Engineering
+        studyType: B.Sc.
+        start_date: 2011-02-01
+        end_date: 2016-09-01
+        highlights:
+          - "Advisor: Dr. Mohammad Jahangir Alam"
+
+    Experience:
+      - company: Louisiana State University, Department of Environmental Sciences
+        position: Graduate Research Assistant
+        location: Baton Rouge, LA, USA
+        start_date: 2022-01-01
+        summary: Advisor, Dr. Supratik Mukhopadhyay.
+        highlights:
+          - Active member of the LSU DeepDrug team; build pipelines for protein dataset construction, embedding extraction from pretrained protein models (AlphaFold2, ESM-2, ProtTrans), and protein-protein interaction prediction with graph neural networks (DPEB and KG-DTA papers).
+          - First author of CARCM (submitted to Artificial Intelligence in Agriculture) and of two manuscripts in preparation, CisGPT (generative design of regulatory DNA) and MOPT (drug design in a chemical embedding space); contributor to the USDA-NIFA funded CRISP-RICE project.
+          - Co-developed the out-of-distribution detection methods COMBOOD and XOOD (Best Paper, ICANN 2025), and co-authored a benchmark of deep learning models for daily coastal hypoxia forecasting.
+          - Contribute machine learning models and data fusion pipelines to DeepFire, the LSU wildfire detection and prediction effort (Wildfire XPRIZE Special Recognition Awardee).
+          - Help mentor undergraduate students in Dr. Mukhopadhyay's group on AI research projects.
+
+      - company: Capital Region Planning Commission (CRPC)
+        position: Data Analyst Intern
+        location: Baton Rouge, LA, USA (Hybrid)
+        start_date: 2026-06-01
+        end_date: 2026-08-01
+        summary: Delta Regional Authority (DRA) Local Development District Community Pilot Project Fund.
+        highlights:
+          - Built an AI/LLM-integrated dashboard that retrieves, processes, and delivers customized data insights.
+          - Created agentic AI-enhanced GIS maps and interactive visual materials, and conducted economic development data analysis across CRPC's 11-parish, 243-tract region.
+          - "[Project demo video](https://www.youtube.com/watch?v=EYTbgU9oy4c) and [source code](https://github.com/MdSaifulIslamSajol/CRPC-Data-Analyst-Internship)."
+
+      - company: South Westphalia University of Applied Sciences
+        position: Graduate Student Researcher
+        location: Germany
+        start_date: 2020-01-01
+        end_date: 2021-06-01
+        summary: Advisor, Dr. Andreas Schwung.
+        highlights:
+          - Investigated fully unsupervised deep-learning image segmentation with SLIC superpixel refinement in PyTorch on CIFAR10, STL10, and Pascal VOC.
+          - Proposed classifier and autoencoder extensions that gave more stable masks and reduced undersegmentation (Master's thesis).
+
+      - company: Bangladesh University of Engineering and Technology
+        position: Undergraduate Student Researcher
+        location: Dhaka, Bangladesh
+        start_date: 2015-02-01
+        end_date: 2016-02-01
+        summary: Advisor, Dr. Mohammad Jahangir Alam.
+
+    Awards:
+      - title: Special Recognition Awardee, XPRIZE Wildfire (Space-Based Wildfire Detection and Intelligence Track)
+        date: 2026-09-01
+        awarder: XPRIZE
+        url: https://www.xprize.org/news/xprize-wildfire-awardees
+        summary: The LSU DeepFire team received the $100,000 Special Recognition for Operational Deliverable, one of five awarded teams in the track among more than 300 teams worldwide.
+
+      - title: ENNS Best Paper Award, ICANN 2025
+        date: 2025-09-01
+        awarder: European Neural Network Society (ENNS)
+        url: https://doi.org/10.1007/978-3-032-04558-4_42
+        summary: "Awarded for XOOD: A Self-Supervised Algorithm for Detecting Out-of-Distribution Data for Image Classification."
+
+      - title: Tiger Team Award, We Build Teams That Win
+        date: 2026-02-01
+        awarder: Louisiana State University
+        url: https://www.lsu.edu/blog/2026/02/wbttw-deepfire.php
+        summary: Recognized for interdisciplinary collaboration and service, particularly through contributions to the AI-based wildfire detection and prediction (DeepFire) project.
+
+      - title: AWS Open Data Sponsorship Program (DPEB)
+        date: 2025-07-01
+        awarder: Amazon Web Services
+        url: https://registry.opendata.aws/deepdrug-dpeb/
+        summary: The DeepDrug Protein Embeddings Bank was selected for public hosting on AWS Open Data.
+
+      - title: Best Poster Runner-Up Award (COMBOOD)
+        date: 2024
+        awarder: SIAM International Conference on Data Mining (SDM)
+        summary: Awarded for the COMBOOD out-of-distribution detection paper.
+
+    Grant Proposals:
+      - bullet: "**An Operational Wildfire Decision-Support System: Integrating NASA Earth Observations and AI for Detection, Prediction, and Fire Progression.** NASA ROSES-2025 A.13 Accelerating Earth Solutions, 3-year project. Submitted October 2026, under review. Role: proposed graduate research assistant on the LSU lead team (detection system and Reasoning Engine development). PI: Supratik Mukhopadhyay."
+
+    Software and Data:
+      - bullet: "**DPEB (v1.0.1):** multimodal human protein embeddings and reproducible code. [AWS Open Data](https://registry.opendata.aws/deepdrug-dpeb/), [GitHub](https://github.com/deepdrugai/DPEB), [Zenodo archive](https://doi.org/10.5281/zenodo.19008090)."
+      - bullet: "**XOOD:** code for the self-supervised OOD detection method (ICANN 2025). [GitHub](https://github.com/MdSaifulIslamSajol/xood-icann/)."
+      - bullet: "**CARCM:** context-aware rice cis-regulatory motif framework. [GitHub](https://github.com/MdSaifulIslamSajol/CARCM)."
+      - bullet: "**Drought-responsive rice gene regulation prediction:** code for GatedFusion and baselines. [GitHub](https://github.com/MdSaifulIslamSajol/Drought-Responsive-Rice-Gene-Regulation-Prediction)."
+
+    Paper Review:
+      - bullet: Knowledge-Based Systems (3 papers)
+      - bullet: Computer Methods and Programs in Biomedicine (1 paper)
+      - bullet: Expert Systems with Applications (1 paper)
+      - bullet: IEEE Transactions on Artificial Intelligence, 2024 (1 paper)
+      - bullet: FLAIRS-39, Florida Online Journals (4 papers)
+      - bullet: IEEE GIEST 2024 (2 papers)
+      - bullet: IEEE KPEC 2024 (2 papers)
+      - bullet: IEEE TPEC 2024 (3 papers)
+      - bullet: IEEE GPECOM 2025 (1 paper)
+
+    Graduate Courses:
+      - bullet: CSC 7644 Applied LLM Development
+      - bullet: CSC 7333 Machine Learning
+      - bullet: EXST 7142 Statistical Data Mining
+      - bullet: CSC 7700 Web Search and Data Analytics
+      - bullet: ENVS 7950 Artificial Intelligence for Environment
+      - bullet: CSC 7300 Algorithm Design
+      - bullet: CSC 7103 Advanced Operating Systems
+      - bullet: CSC 7999 Independent Study
+
+    Skills:
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "Python, R, C, C++, MATLAB"
+      - name: Deep Learning Frameworks
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, TensorFlow, Keras, DGL, CUDA, scikit-learn, Pandas, NumPy"
+      - name: Biomedical and Genomic Data
+        icon: fa-solid fa-dna
+        keywords: "PPI graphs (UniProt, HPRD, HuMAP, IntAct, STRING), promoter sequence modeling, motif features, RiceMetaSys, medical image analysis"
+      - name: Foundation Models
+        icon: fa-solid fa-cubes
+        keywords: "ESM-2, ProtTrans BERT-BFD, AlphaFold2 representations, ProtVec, DNA foundation model fine-tuning, gated fusion and cross-attention"
+      - name: Architectures
+        icon: fa-solid fa-diagram-project
+        keywords: "CNNs, Vision Transformers, hybrid models, BiLSTM, TCN, spatio-temporal transformers, autoregressive transformers, VAEs, GNNs (GraphSAGE, GCN, GAT, GIN)"
+      - name: HPC and Cloud
+        icon: fa-solid fa-server
+        keywords: "Multi-GPU Linux servers (8x A100, 8x V100), NVLink, AWS (S3, Open Data)"
+      - name: Reliable ML
+        icon: fa-solid fa-shield-halved
+        keywords: "Out-of-distribution detection, domain adaptation (including source-free), benchmarking, McNemar's test"
+      - name: Open Research Software
+        icon: fa-brands fa-git-alt
+        keywords: "Git/GitHub, MIT-licensed code, CC-BY 4.0 data, Zenodo archives, uv, conda, LaTeX"

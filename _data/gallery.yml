@@ -1,0 +1,30 @@
+# Photos shown in the "moments" section of the home page.
+# width/height reserve space so the page does not jump while photos load.
+- image: assets/img/deepfire_award_ceremony.jpg
+  caption: XPRIZE Wildfire award ceremony with the DeepFire team, 2026
+  width: 1280
+  height: 847
+- image: assets/img/lsu_msc_commencement.jpg
+  caption: M.Sc. commencement at Louisiana State University, 2026
+  width: 1600
+  height: 900
+- image: assets/img/deepfire_times_square.jpg
+  caption: XPRIZE Wildfire awardees announced in Times Square, New York
+  width: 800
+  height: 1063
+- image: assets/img/lsu_we_build_teams_that_win.jpg
+  caption: DeepFire team members honored at an LSU Men's Basketball game (We Build Teams That Win)
+  width: 1080
+  height: 1080
+- image: assets/img/crpc_internship_team.jpg
+  caption: With the Capital Region Planning Commission team, summer 2026
+  width: 1280
+  height: 720
+- image: assets/img/lsu_team_built_to_win.jpg
+  caption: With the research team at LSU
+  width: 1280
+  height: 720
+- image: assets/img/lsu_team_group.jpg
+  caption: Research team at LSU
+  width: 1600
+  height: 1067
