@@ -1,0 +1,31 @@
+---
+layout: page
+title: contact
+permalink: /contact/
+nav: true
+nav_order: 8
+nav_section: contact
+description: How to reach me.
+---
+
+<link rel="stylesheet" href="{{ '/assets/custom/sections.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+<p class="sx-lead">{{ site.contact_note }}</p>
+<div class="sx-contact-grid">
+  <a class="sx-contact-card" href="mailto:{{ site.data.socials.email }}">
+    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    <span><strong>Email</strong>{{ site.data.socials.email }}</span>
+  </a>
+  <a class="sx-contact-card" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">
+    <i class="ai ai-google-scholar" aria-hidden="true"></i>
+    <span><strong>Google Scholar</strong>Publications and citations</span>
+  </a>
+  <a class="sx-contact-card" href="https://github.com/{{ site.data.socials.github_username }}">
+    <i class="fa-brands fa-github" aria-hidden="true"></i>
+    <span><strong>GitHub</strong>{{ site.data.socials.github_username }}</span>
+  </a>
+  <a class="sx-contact-card" href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}">
+    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    <span><strong>LinkedIn</strong>Md Saiful Islam Sajol</span>
+  </a>
+</div>

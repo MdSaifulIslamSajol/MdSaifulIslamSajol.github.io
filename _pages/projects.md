@@ -5,7 +5,7 @@ title: projects
 permalink: /projects/
 description: Research projects in biology and drug discovery, reliable AI, environment and energy, and applied AI.
 nav: true
-nav_order: 2
+nav_order: 3
 display_categories: [biology and drug discovery, reliable ai, environment and energy, applied ai]
 horizontal: false
 ---

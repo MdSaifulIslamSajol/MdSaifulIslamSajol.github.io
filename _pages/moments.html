@@ -1,0 +1,20 @@
+---
+layout: page
+title: moments
+permalink: /moments/
+nav: true
+nav_order: 6
+nav_section: moments
+description: Photos from award ceremonies, commencement, and research teams.
+---
+
+<link rel="stylesheet" href="{{ '/assets/custom/sections.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+<div class="sx-gallery">
+  {% for photo in site.data.gallery %}
+    <figure class="sx-photo">
+      <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
+      <figcaption>{{ photo.caption }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>

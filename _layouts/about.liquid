@@ -120,98 +120,11 @@ layout: default
     </section>
   {% endif %}
 
-  <!-- ============================== PROJECTS ============================== -->
-  <section id="projects" class="sx-section" aria-labelledby="projects-title">
-    <header class="sx-section-head">
-      <h2 id="projects-title" class="sx-title"><span class="sx-num">02</span> Research Projects</h2>
-      <a class="sx-more" href="{{ '/projects/' | relative_url }}">project pages <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </header>
-    {% assign projects_page = site.pages | where: 'permalink', '/projects/' | first %}
-    {% assign categories = projects_page.display_categories %}
-    {% for category in categories %}
-      {% assign categorized_projects = site.projects | where: 'category', category | sort: 'importance' %}
-      {% if categorized_projects.size > 0 %}
-        <h3 class="sx-subhead">{{ category }}</h3>
-        <div class="sx-cards">
-          {% for project in categorized_projects %}
-            <a class="sx-card" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-              {% if project.img %}
-                <div class="sx-card-media{% if project.img_fit == 'contain' %} sx-contain{% endif %}">
-                  <img src="{{ project.img | relative_url }}" alt="{{ project.title }}" loading="lazy">
-                </div>
-              {% else %}
-                <div class="sx-card-media sx-card-media-empty" aria-hidden="true">
-                  {% if project.icon %}<i class="{{ project.icon }}"></i>{% else %}<span>{{ project.title | slice: 0 }}</span>{% endif %}
-                </div>
-              {% endif %}
-              <div class="sx-card-body">
-                <h4 class="sx-card-title">{{ project.title }}</h4>
-                <p class="sx-card-text">{{ project.description }}</p>
-                <span class="sx-card-link">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          {% endfor %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </section>
-
-  <!-- ============================== PUBLICATIONS ============================== -->
-  <section id="publications" class="sx-section" aria-labelledby="publications-title">
-    <header class="sx-section-head">
-      <h2 id="publications-title" class="sx-title"><span class="sx-num">03</span> Publications</h2>
-      <a class="sx-more" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
-        >Google Scholar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-      ></a>
-    </header>
-    <p class="sx-lead">
-      Peer-reviewed papers and manuscripts, newest first. Use the buttons on each entry for the abstract, the DOI, the code, and the
-      BibTeX.
-    </p>
-    <div class="publications">
-      {% bibliography %}
-    </div>
-  </section>
-
-  <!-- ============================== AWARDS ============================== -->
-  <section id="awards" class="sx-section" aria-labelledby="awards-title">
-    <header class="sx-section-head">
-      <h2 id="awards-title" class="sx-title"><span class="sx-num">04</span> Honors and Awards</h2>
-      <a class="sx-more" href="{{ '/awards/' | relative_url }}">awards page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-    </header>
-    <div class="sx-awards">
-      {% for award in site.data.awards %}
-        <article class="sx-award">
-          {% if award.image %}
-            <div class="sx-award-media">
-              <img src="{{ award.image | relative_url }}" alt="{{ award.title }}" loading="lazy" data-zoomable>
-            </div>
-          {% else %}
-            <div class="sx-award-media sx-award-icon" aria-hidden="true"><i class="{{ award.icon | default: 'fa-solid fa-award' }}"></i></div>
-          {% endif %}
-          <div class="sx-award-body">
-            <span class="sx-award-date">{{ award.date }}</span>
-            <h3 class="sx-award-title">{{ award.title }}</h3>
-            <p class="sx-award-org">{{ award.org }}</p>
-            <p class="sx-award-text">{{ award.summary }}</p>
-            {% if award.links %}
-              <p class="sx-award-links">
-                {% for l in award.links %}
-                  <a href="{{ l.url }}">{{ l.label }}</a>
-                {% endfor %}
-              </p>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-  </section>
-
   <!-- ============================== EXPERIENCE & EDUCATION ============================== -->
   {% assign cv = site.data.cv.cv %}
   <section id="experience" class="sx-section" aria-labelledby="experience-title">
     <header class="sx-section-head">
-      <h2 id="experience-title" class="sx-title"><span class="sx-num">05</span> Experience and Education</h2>
+      <h2 id="experience-title" class="sx-title"><span class="sx-num">02</span> Experience and Education</h2>
       <a class="sx-more" href="{{ '/cv/' | relative_url }}">full CV <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </header>
     <div class="sx-two-col">
@@ -273,6 +186,94 @@ layout: default
     </div>
   </section>
 
+  <!-- ============================== PROJECTS ============================== -->
+  <section id="projects" class="sx-section" aria-labelledby="projects-title">
+    <header class="sx-section-head">
+      <h2 id="projects-title" class="sx-title"><span class="sx-num">03</span> Research Projects</h2>
+      <a class="sx-more" href="{{ '/projects/' | relative_url }}">project pages <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </header>
+    {% assign projects_page = site.pages | where: 'permalink', '/projects/' | first %}
+    {% assign categories = projects_page.display_categories %}
+    {% for category in categories %}
+      {% assign categorized_projects = site.projects | where: 'category', category | sort: 'importance' %}
+      {% if categorized_projects.size > 0 %}
+        <h3 class="sx-subhead">{{ category }}</h3>
+        <div class="sx-cards">
+          {% for project in categorized_projects %}
+            <a class="sx-card" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+              {% if project.img %}
+                <div class="sx-card-media{% if project.img_fit == 'contain' %} sx-contain{% endif %}">
+                  <img src="{{ project.img | relative_url }}" alt="{{ project.title }}" loading="lazy">
+                </div>
+              {% else %}
+                <div class="sx-card-media sx-card-media-empty" aria-hidden="true">
+                  {% if project.icon %}<i class="{{ project.icon }}"></i>{% else %}<span>{{ project.title | slice: 0 }}</span>{% endif %}
+                </div>
+              {% endif %}
+              <div class="sx-card-body">
+                {% if project.period %}<span class="sx-card-period">{{ project.period }}</span>{% endif %}
+                <h4 class="sx-card-title">{{ project.title }}</h4>
+                <p class="sx-card-text">{{ project.description }}</p>
+                <span class="sx-card-link">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <!-- ============================== PUBLICATIONS ============================== -->
+  <section id="publications" class="sx-section" aria-labelledby="publications-title">
+    <header class="sx-section-head">
+      <h2 id="publications-title" class="sx-title"><span class="sx-num">04</span> Publications</h2>
+      <a class="sx-more" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}"
+        >Google Scholar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+      ></a>
+    </header>
+    <p class="sx-lead">
+      Peer-reviewed papers and manuscripts, newest first. Use the buttons on each entry for the abstract, the DOI, the code, and the
+      BibTeX.
+    </p>
+    <div class="publications">
+      {% bibliography %}
+    </div>
+  </section>
+
+  <!-- ============================== AWARDS ============================== -->
+  <section id="awards" class="sx-section" aria-labelledby="awards-title">
+    <header class="sx-section-head">
+      <h2 id="awards-title" class="sx-title"><span class="sx-num">05</span> Honors and Awards</h2>
+      <a class="sx-more" href="{{ '/awards/' | relative_url }}">awards page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </header>
+    <div class="sx-awards">
+      {% for award in site.data.awards %}
+        <article class="sx-award">
+          {% if award.image %}
+            <div class="sx-award-media">
+              <img src="{{ award.image | relative_url }}" alt="{{ award.title }}" loading="lazy" data-zoomable>
+            </div>
+          {% else %}
+            <div class="sx-award-media sx-award-icon" aria-hidden="true"><i class="{{ award.icon | default: 'fa-solid fa-award' }}"></i></div>
+          {% endif %}
+          <div class="sx-award-body">
+            <span class="sx-award-date">{{ award.date }}</span>
+            <h3 class="sx-award-title">{{ award.title }}</h3>
+            <p class="sx-award-org">{{ award.org }}</p>
+            <p class="sx-award-text">{{ award.summary }}</p>
+            {% if award.links %}
+              <p class="sx-award-links">
+                {% for l in award.links %}
+                  <a href="{{ l.url }}">{{ l.label }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
   <!-- ============================== MOMENTS (PHOTOS) ============================== -->
   {% if site.data.gallery %}
     <section id="moments" class="sx-section" aria-labelledby="moments-title">
@@ -299,8 +300,18 @@ layout: default
       </header>
       <div class="sx-posts">
         {% for post in site.posts limit: page.latest_posts.limit %}
-          <a class="sx-post" href="{{ post.url | relative_url }}">
+          {% if post.redirect contains '://' %}
+            {% assign post_href = post.redirect %}
+          {% else %}
+            {% assign post_href = post.url | relative_url %}
+          {% endif %}
+          <a class="sx-post" href="{{ post_href }}">
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
+            {% if post.source %}
+              <span class="sx-post-source"
+                >{{ post.source }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+              ></span>
+            {% endif %}
             <h3>{{ post.title }}</h3>
             {% if post.description %}<p>{{ post.description }}</p>{% endif %}
           </a>
