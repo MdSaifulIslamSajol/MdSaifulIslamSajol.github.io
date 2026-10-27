@@ -86,6 +86,7 @@
   award_name  = {Best Paper},
   abstract    = {Neural Networks are known to be opaque in their decision-making process. In particular, it is known that, when encountering out-of-distribution (OOD) data, they can confidently provide an erroneous output without warning the user. It is well known that the "class probabilities" output by the softmax layer of a neural network are only weakly correlated with how confident the model should be about the prediction. Therefore, identifying out-of-distribution input data at inference time is critical for many applications of machine learning. We present XOOD: a self-supervised extreme value-based OOD detection framework for image classification. The algorithm relies on the signals captured by the extreme values of the data in the activation layers of the neural network in order to distinguish between in-distribution and OOD instances. We show experimentally that XOOD outperforms state-of-the-art OOD detection methods on many benchmark data sets in both efficiency and accuracy, reducing false-positive rate (FPR95) by 50\%, while improving the inferencing time by an order of magnitude.},
   selected    = {true},
+  preview     = {xood.jpg},
   bibtex_show = {true},
 }
 
@@ -99,6 +100,7 @@
   html        = {https://doi.org/10.1109/BIGDATA66926.2025.11402646},
   code        = {https://github.com/rmagesh148/hypoxia-ai/},
   abstract    = {Coastal hypoxia, especially in the northern part of Gulf of Mexico, presents a persistent ecological and economic concern. Seasonal models offer coarse forecasts that miss the fine-scale variability needed for daily, responsive ecosystem management. We present a study that compares four deep learning architectures for daily hypoxia classification: Bidirectional Long Short-Term Memory (BiLSTM), Medformer (Medical Transformer), Spatio-Temporal Transformer (ST-Transformer), and Temporal Convolutional Network (TCN). Our training data consists of 2009-2020 hindcast data from a coupled hydrodynamic-biogeochemical model. Similarly, we use hindcast data from 2020 through 2024 as test data. We constructed classification models incorporating water column stratification, sediment oxygen consumption, and temperature-dependent decomposition rates. We evaluated each architecture using the same data preprocessing, input/output formulation, and validation protocols. Each model achieved high classification accuracy and strong discriminative ability with ST-Transformer achieving the highest performance across all metrics and test periods (AUC-ROC: 0.982-0.992). We also employed McNemar's method to identify statistically significant differences in model predictions. Our contribution is a reproducible framework for operational real-time hypoxia prediction that can support broader efforts in the environmental and ocean modeling systems community and in ecosystem resilience.},
+  preview     = {hypoxia.jpg},
   bibtex_show = {true},
 }
 
@@ -112,6 +114,7 @@
   html        = {https://doi.org/10.1109/ICAIIC64266.2025.10920790},
   code        = {https://github.com/MdSaifulIslamSajol/pneumonia-detection-with-chest-x-ray-images},
   abstract    = {Image classification is a fundamental computer vision task crucial for interpretation of visual data. Significant advancements have been observed in image classification models over recent years. In this paper, a taxonomy is presented categorizing image classification models into CNN, Transformer, and Hybrid models, in addition to an evaluation of these models for pneumonia detection using a chest X-ray (CXR) dataset. Key metrics such as accuracy, precision, recall, F1-score, and average inference time per image were analyzed to understand tradeoffs between performance and efficiency for most feasible model selection concerning this task. Transformer-based models, particularly SwinV2, proved their robustness for pneumonia detection, achieving the highest accuracy (95.03\%), recall (94.66\%), and F1-score (94.70\%). However, the longer inference time (133.58 ms) presents a considerable disadvantage. Although CNN models like EfficientNetB0 and ResNet50 achieved the highest precision, they underperformed in other metrics, highlighting the need for balanced evaluations. Hybrid models, such as CvT, consistently performed well across all metrics, showcasing the potential of transformers integrated with convolutional layers. However, no single model category demonstrated unanimous superiority, as CNN models exhibited much faster temporal efficiency than Transformer and Hybrid models.},
+  preview     = {pneumonia.jpg},
   bibtex_show = {true},
 }
 
@@ -125,6 +128,7 @@
   doi         = {10.1145/3703412.3703426},
   html        = {https://doi.org/10.1145/3703412.3703426},
   abstract    = {Drug target affinity (DTA) prediction is essential at different phases of drug discovery and virtual drug screening. However, traditional wet lab experiments are time and resource-intensive owing to the complex interactions within the vast biological and chemical spaces. Computational methods have proven their potential to predict DTA, but none have considered the association of drugs and proteins to capture the complex interactions in the biological network between drugs and proteins. To address this, we propose a novel framework leveraging knowledge graph-based meta-path learning (KG-DTA) to enhance DTA prediction. First, we construct a weighted heterogeneous network of drugs and proteins that incorporates three types of entities: drug-drug similarity, protein-protein similarity, and drug-protein affinity scores. Node features of both drugs and proteins in this network are enriched using embeddings from pretrained models. The meta-path learning technique extracts meaningful pathways within the network by focusing on paths from drug nodes to protein nodes, and a path length restricted to 2 or 3. This strategy yields 6 distinct pathways that capture intricate relationships between drugs and proteins. Finally, the XGBoost-based machine learning algorithm is used to predict the binding affinity score. Experimentally, we used two standard benchmark datasets: Davis and Kiba to evaluate KG-DTA. Experiments show that our method significantly surpasses the performance of state-of-the-art techniques, achieving mean square errors of 0.23 and 0.11 on the Davis and Kiba datasets, respectively.},
+  preview     = {kgdta.jpg},
   bibtex_show = {true},
 }
 
@@ -142,6 +146,7 @@
   award_name  = {Best Poster Runner-Up},
   abstract    = {Identifying out-of-distribution (OOD) data at inference time is crucial for many machine learning applications, especially for automation. We present a novel unsupervised semi-parametric framework COMBOOD for OOD detection with respect to image recognition. Our framework combines signals from two distance metrics, nearest-neighbor and Mahalanobis, to derive a confidence score for an inference point to be out-of-distribution. The former provides a non-parametric approach to OOD detection. The latter provides a parametric, simple, yet effective method for detecting OOD data points, especially, in the far OOD scenario, where the inference point is far apart from the training data set in the embedding space. However, its performance is not satisfactory in the near OOD scenarios that arise in practical situations. Our COMBOOD framework combines the two signals in a semi-parametric setting to provide a confidence score that is accurate both for the near-OOD and far-OOD scenarios. We demonstrate experimentally that COMBOOD outperforms state-of-the-art OOD detection methods on the OpenOOD (both version 1 and most recent version 1.5) benchmark datasets (for both far-OOD and near-OOD) as well as on the documents dataset in terms of accuracy. COMBOOD scales linearly with the size of the embedding space, making it ideal for many real-life applications.},
   selected    = {true},
+  preview     = {combood.jpg},
   bibtex_show = {true},
 }
 
@@ -155,6 +160,7 @@
   html        = {https://doi.org/10.1109/IS61756.2024.10705175},
   code        = {https://github.com/MdSaifulIslamSajol/brain-tumor-detection},
   abstract    = {Brain tumor is a serious disease that can lead to fatal consequences. Moreover, there are different types of brain tumor with different progression rate and severeness. Thus, brain tumor classification is an essential task in medical diagnosis. Convolutional Neural Network (CNN) based deep learning methods have shown great potential for brain tumor classification using Magnetic Resonance Imaging (MRI) scans of the brain. Recent developments in transformer based deep learning models have shown promising outcomes in image classification tasks. However, these models have not yet been much explored in the application of brain tumor classification. In this paper, we employ seven advanced models which utilize transformers or mimic the self-attention operation of transformers through their design, for brain tumor classification. To assess their performance for this particular task, five conventional CNN based methods have also been applied and compared with these models. To make our assessment more coherent and comprehensive we perform the comparison for four different datasets. The results indicate that transformer-based advanced models do not provide a distinct advantage over conventional CNN-based models. The CNN-based ResNet-50 performs well overall, especially with smaller datasets. For larger datasets, transformer-based models generally perform better than CNN-based models, although the difference is not significant.},
+  preview     = {brain.jpg},
   bibtex_show = {true},
 }
 
@@ -168,6 +174,7 @@
   html        = {https://doi.org/10.1109/EECSI63442.2024.10776508},
   code        = {https://github.com/MdSaifulIslamSajol/skin-cancer-detection},
   abstract    = {Skin cancer has always been one of the most common types of cancer in medical history. To find skin problems early, it is necessary to have a reliable automated method for recognizing them. Our study is based on the HAM10000 dataset, which is made up of 10015 different dermatoscopic pictures of common pigmented skin lesions from different sources. The newest deep learning techniques, such as Convolutional Neural Networks (CNN), Transformers, and Hybrid models, i.e., ConvNeXt V2, SwinV2, ViT2, CvT, DenseNet, ResNet, PVTv2, EfficientNet, EfficientFormer, VGG, MobileNet, MobileViTV2, GoogLeNet, are all compared in this study to see which one is better for automatically detecting skin cancer lesions. We found the best model for identifying skin lesions by determining its accuracy, F1-score, inference time, and confusion matrix. Among our implemented models, the ConvNeXt V2 model has an accuracy of 93.2\% with the lowest inference time.},
+  preview     = {skin.jpg},
   bibtex_show = {true},
 }
 
@@ -181,6 +188,7 @@
   html        = {https://doi.org/10.1109/CITDS62610.2024.10791343},
   code        = {https://github.com/MdSaifulIslamSajol/document-tobacco-convnextv2},
   abstract    = {Proper classification of documents is of tremendous importance for an organization. As digital copies of documents are now available due to technological advances, it has become convenient to classify them automatically using machine learning or deep learning algorithms. Deep CNNs have been widely applied for document image classification, whereas newly introduced transformer-based models have also presented favorable outcomes. In this paper, one of the advanced and very high-performing deep CNN models, ConvNeXt V2, developed very recently, has been adapted for the document image classification task, which leverages the imitation of the self-attention mechanism of transformers through the use of masked autoencoders. Prior studies have suggested that models pre-trained on ImageNet may not perform optimally when directly applied to document classification tasks. Nevertheless, our findings reveal substantial enhancements in performance using ConvNeXt V2, indicating that further domain-specific pre-training (for instance, on the RVL-CDIP dataset) might not be essential for attaining high accuracy. The model has been applied to one of the most standard document image classification datasets, Tobacco-3482. The results show a high overall accuracy of 92.25\% with fast convergence, outperforming several other state-of-the-art methods.},
+  preview     = {convnext.jpg},
   bibtex_show = {true},
 }
 
@@ -206,6 +214,7 @@
   doi         = {10.1109/EPEi63510.2024.10758045},
   html        = {https://doi.org/10.1109/EPEi63510.2024.10758045},
   abstract    = {Buildings consume a significant portion of a nation's total energy, accounting for about 70 percent of electricity use in the US. Predicting building energy demand accurately is crucial for utilities to ensure efficient operation. Deep learning-based approaches have demonstrated great potential for this task. However, building loads are heavily influenced by local weather conditions. Conventional deep learning models are typically location-specific and demand extensive local data for accurate predictions. A location independent model can offer great advantage, which can be attained through application of domain adaptation. This study applies domain adaptation techniques to develop a deep learning model that predicts building energy demand independent of location. Our proposed model uses a pre-trained deep learning architecture trained on data from one location to predict building load in another location, requiring only minimal data from the target domain. The findings demonstrate that the domain-adapted model achieves improvements in both accuracy and computational speed compared to non-adapted models.},
+  preview     = {building.jpg},
   bibtex_show = {true},
 }
 
@@ -218,6 +227,7 @@
   doi         = {10.1109/KPEC61529.2024.10676105},
   html        = {https://doi.org/10.1109/KPEC61529.2024.10676105},
   abstract    = {Electricity theft poses significant challenges to utility companies worldwide, resulting in substantial financial losses. This study addresses the problem by leveraging machine learning algorithms to detect energy theft in smart grids. The insufficiency of data on theft conditions and the imbalance of datasets have always hindered the precise identification of fraudulent activity. To mitigate these challenges, we curated a dataset from the Open Energy Data Initiative, which encompasses sixteen consumer categories and six theft conditions. Our approach focuses on using the Synthetic Minority Oversampling Technique (SMOTE) to address class imbalance by generating synthetic samples for minority classes. We conducted a comparative analysis of various machine learning based classification algorithms, including K-Nearest Neighbors (KNN), Decision Tree, Random Forest (RF), Bagging with RF, and Ensemble Learning, and observed the results before and after the implementation of SMOTE on the dataset. We find that SMOTE demonstrates its most significant impact on classifying the most challenging classes within the dataset. In particular, it shows improvements of 57.00\%, 37.88\%, and 36.88\% for Class 6, Class 1, and Class 3, respectively, with the KNN algorithm. Overall, this research contributes to advancing energy security by highlighting the importance of robust theft detection frameworks for safeguarding energy distribution systems.},
+  preview     = {theft.jpg},
   bibtex_show = {true},
 }
 
@@ -231,6 +241,7 @@
   html        = {https://doi.org/10.1109/GPECOM61896.2024.10582569},
   code        = {https://github.com/MdSaifulIslamSajol/wind_power_domain_adaptation},
   abstract    = {Accurate prediction of wind power is essential for the grid integration of this intermittent renewable source and aiding grid planners in forecasting available wind capacity. Spatial differences lead to discrepancies in climatological data distributions between two geographically dispersed regions, consequently making the prediction task more difficult. Thus, a prediction model that learns from the data of a particular climatic region can suffer from being less robust. A deep neural network (DNN) based domain adaptive approach is proposed to counter this drawback. Effective weather features from a large set of weather parameters are selected using a random forest approach. A pre-trained model from the source domain is utilized to perform the prediction task, assuming no source data is available during target domain prediction. The weights of only the last few layers of the DNN model are updated throughout the task, keeping the rest of the network unchanged, making the model faster compared to the traditional approaches. The proposed approach demonstrates higher accuracy ranging from 6.14\% to even 28.44\% compared to the traditional non-adaptive method.},
+  preview     = {wind.jpg},
   bibtex_show = {true},
 }
 
@@ -243,5 +254,6 @@
   doi         = {10.1109/ETFG55873.2023.10407265},
   html        = {https://doi.org/10.1109/ETFG55873.2023.10407265},
   abstract    = {The prediction of solar power generation is a challenging task due to its dependence on climatic characteristics that exhibit spatial and temporal variability. The performance of a prediction model may vary across different places due to changes in data distribution, resulting in a model that works well in one region but not in others. Furthermore, as a consequence of global warming, there is a notable acceleration in the alteration of weather patterns on an annual basis. In this paper, a domain adaptive deep learning-based framework is proposed to estimate solar power generation using weather features that can solve the aforementioned challenges. A feedforward deep convolutional network model is trained for a known location dataset in a supervised manner and utilized to predict the solar power of an unknown location later. This adaptive data-driven approach exhibits notable advantages in terms of computing speed, storage efficiency, and its ability to improve outcomes in scenarios where state-of-the-art non-adaptive methods fail. Our method has shown an improvement of 10.47\%, 7.44\%, 5.11\% in solar power prediction accuracy compared to the best performing non-adaptive method for California (CA), Florida (FL) and New York (NY), respectively.},
+  preview     = {solar.jpg},
   bibtex_show = {true},
 }
