@@ -141,7 +141,7 @@ layout: default
               <p class="sx-tl-org">{{ e.company }}{% if e.location %} · {{ e.location }}{% endif %}</p>
               {% if e.highlights %}
                 <ul class="sx-tl-points">
-                  {% for h in e.highlights limit: 3 %}
+                  {% for h in e.highlights %}
                     <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' }}</li>
                   {% endfor %}
                 </ul>
