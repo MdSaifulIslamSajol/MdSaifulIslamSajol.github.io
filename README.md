@@ -15,7 +15,7 @@ Built with [al-folio](https://github.com/alshedivat/al-folio) (Jekyll, MIT licen
 | News items | add a file to `_news/` (copy an existing one) |
 | Research projects | `_projects/*.md` (one file per project) |
 | Awards (home page and /awards/) | `_data/awards.yml` |
-| Photos in the "Moments" section | `_data/gallery.yml` and the image in `assets/img/` |
+| Photos section (add `last_row: true` to put a photo in its own final row) | `_data/gallery.yml` and the image in `assets/img/` |
 | CV page and the Experience/Education timeline | `_data/cv.yml` |
 | Blog posts | add a file to `_posts/` named `YYYY-MM-DD-title.md` |
 | Email, Scholar, GitHub, LinkedIn links | `_data/socials.yml` |
