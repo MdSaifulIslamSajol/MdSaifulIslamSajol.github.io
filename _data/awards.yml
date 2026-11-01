@@ -36,7 +36,7 @@
 - title: AWS Open Data Sponsorship Program
   org: Amazon Web Services
   date: Jul 2025
-  icon: fa-brands fa-aws
+  image: assets/img/award_aws_open_data_dpeb.jpg
   summary: >
     The DeepDrug Protein Embeddings Bank (DPEB) was selected for the program, enabling large-scale public hosting of
     multimodal human protein embeddings.

@@ -30,6 +30,8 @@ These files override files from the `al_folio_core` theme gem (version 1.0.15). 
 - `_layouts/about.liquid`: the single-page home layout with all sections.
 - `_includes/header.liquid`: navbar items with `nav_section:` in their front matter link to `/#section`.
 - `_includes/news.liquid`: news dates show month and year.
+- `_includes/footer.liquid`: empty, so no footer bar is shown.
+- `_layouts/bib.liquid`: publication titles link to the paper's DOI page.
 - `assets/custom/sections.css` and `assets/custom/sections.js`: styling (light and dark), smooth scrolling, active-section highlighting, and fade-in on scroll.
 
 ## Publishing

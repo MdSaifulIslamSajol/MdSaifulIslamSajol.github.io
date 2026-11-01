@@ -3,13 +3,19 @@ layout: page
 title: CRISP-RICE, AI for Climate-Resilient Rice (USDA Grant)
 period: Jul 2025 – Present
 description: Machine learning to understand and predict how rice genes respond to drought, and to design regulatory DNA (USDA-NIFA CRISP-RICE).
-icon: fa-solid fa-seedling
+img: assets/img/proj_crisp_rice_card.jpg
 importance: 2
 category: biology and drug discovery
 related_publications: true
 ---
 
 **CRISP-RICE: Climate Resilient Innovations for Sustainable Production of Rice (USDA-NIFA grant) · Jul 2025 – Present** · [Project page (USDA National Agricultural Library)](https://www.nal.usda.gov/research-tools/food-safety-research-projects/climate-resilient-innovations-sustainable-production-rice-crisp-rice)
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-12 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/proj_crisp_rice_banner.jpg" title="CRISP RICE, LSU AgCenter" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
 
 #### About the project
 
