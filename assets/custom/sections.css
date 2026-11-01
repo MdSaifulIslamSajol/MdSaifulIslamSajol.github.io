@@ -572,6 +572,14 @@ html[data-theme="dark"] {
   columns: 3 260px;
   column-gap: 1rem;
 }
+/* Photos flagged last_row: true sit in a final row, starting at the left,
+   each as wide as one gallery column. */
+.sx-gallery-last {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(260px, calc((100% - 2rem) / 3)), 1fr));
+  column-gap: 1rem;
+  align-items: start;
+}
 .sx-photo {
   break-inside: avoid;
   margin: 0 0 1rem;
