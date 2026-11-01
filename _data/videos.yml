@@ -1,0 +1,10 @@
+# Videos section (home page and /videos/). Each card opens the video on YouTube.
+# thumbnail: YouTube's 1280x720 cover image for the video.
+- title: "DeepFire Wildfire Detection System: Live Demo"
+  caption: Live demo in New South Wales, Australia, as a Wildfire XPRIZE finalist.
+  url: https://www.youtube.com/watch?v=1zZtAG34TkA
+  thumbnail: https://i.ytimg.com/vi/1zZtAG34TkA/maxresdefault.jpg
+- title: "CRPC Data Visualization and AI Assistance: Internship Project Demo"
+  caption: Data Analyst internship at the Capital Region Planning Commission, Baton Rouge, summer 2026.
+  url: https://www.youtube.com/watch?v=EYTbgU9oy4c
+  thumbnail: https://i.ytimg.com/vi/EYTbgU9oy4c/maxresdefault.jpg

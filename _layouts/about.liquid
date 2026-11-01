@@ -281,11 +281,21 @@ layout: default
     </section>
   {% endif %}
 
+  <!-- ============================== VIDEOS ============================== -->
+  {% if site.data.videos %}
+    <section id="videos" class="sx-section" aria-labelledby="videos-title">
+      <header class="sx-section-head">
+        <h2 id="videos-title" class="sx-title"><span class="sx-num">09</span> Videos</h2>
+      </header>
+      {% include sx_videos.liquid %}
+    </section>
+  {% endif %}
+
   <!-- ============================== BLOG ============================== -->
   {% if page.latest_posts and page.latest_posts.enabled %}
     <section id="blog" class="sx-section" aria-labelledby="blog-title">
       <header class="sx-section-head">
-        <h2 id="blog-title" class="sx-title"><span class="sx-num">09</span> Blog</h2>
+        <h2 id="blog-title" class="sx-title"><span class="sx-num">10</span> Blog</h2>
         <a class="sx-more" href="{{ '/blog/' | relative_url }}">all posts <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </header>
       <div class="sx-posts">
@@ -314,7 +324,7 @@ layout: default
   {% if site.data.certifications %}
     <section id="certifications" class="sx-section" aria-labelledby="certifications-title">
       <header class="sx-section-head">
-        <h2 id="certifications-title" class="sx-title"><span class="sx-num">10</span> Licenses &amp; certifications</h2>
+        <h2 id="certifications-title" class="sx-title"><span class="sx-num">11</span> Licenses &amp; certifications</h2>
         <a class="sx-more" href="{{ '/certifications/' | relative_url }}">certifications page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </header>
       {% include sx_certifications.liquid %}
@@ -324,7 +334,7 @@ layout: default
   <!-- ============================== CONTACT ============================== -->
   <section id="contact" class="sx-section sx-contact" aria-labelledby="contact-title">
     <header class="sx-section-head">
-      <h2 id="contact-title" class="sx-title"><span class="sx-num">11</span> Contact</h2>
+      <h2 id="contact-title" class="sx-title"><span class="sx-num">12</span> Contact</h2>
     </header>
     <p class="sx-lead">{{ site.contact_note }}</p>
     <div class="sx-contact-grid">

@@ -1,0 +1,23 @@
+{% comment %}
+  Video cards (site-specific include, not part of al-folio).
+  Data: _data/videos.yml. The thumbnail and the title both open the video.
+{% endcomment %}
+<div class="sx-videos">
+  {% for v in site.data.videos %}
+    <article class="sx-video">
+      <a class="sx-video-thumb" href="{{ v.url }}" target="_blank" rel="noopener" aria-label="Watch {{ v.title }} on YouTube">
+        <img src="{{ v.thumbnail }}" alt="Video thumbnail: {{ v.title }}" width="1280" height="720" loading="lazy">
+        <span class="sx-video-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+      </a>
+      <div class="sx-video-body">
+        <h3 class="sx-video-title">
+          <a href="{{ v.url }}" target="_blank" rel="noopener">{{ v.title }}</a>
+        </h3>
+        {% if v.caption %}<p class="sx-video-caption">{{ v.caption }}</p>{% endif %}
+        <a class="sx-video-link" href="{{ v.url }}" target="_blank" rel="noopener"
+          ><i class="fa-brands fa-youtube" aria-hidden="true"></i> Watch on YouTube</a
+        >
+      </div>
+    </article>
+  {% endfor %}
+</div>

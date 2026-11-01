@@ -17,6 +17,7 @@ Built with [al-folio](https://github.com/alshedivat/al-folio) (Jekyll, MIT licen
 | Awards (home page and /awards/) | `_data/awards.yml` |
 | Photos section (`column: 1`, `2` or `3` picks the column) | `_data/gallery.yml` and the image in `assets/img/` |
 | Licenses and certifications | `_data/certifications.yml` |
+| Videos section (YouTube links and thumbnails) | `_data/videos.yml` |
 | CV page and the Experience/Education timeline | `_data/cv.yml` |
 | Blog posts | add a file to `_posts/` named `YYYY-MM-DD-title.md` |
 | Email, Scholar, GitHub, LinkedIn links | `_data/socials.yml` |
