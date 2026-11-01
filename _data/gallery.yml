@@ -1,5 +1,9 @@
 # Photos shown in the "moments" section of the home page.
 # width/height reserve space so the page does not jump while photos load.
+- image: assets/img/deepfire_xprize_team.jpg
+  caption: DeepFire team with the XPRIZE Wildfire Special Recognition, 2026
+  width: 1024
+  height: 768
 - image: assets/img/deepfire_award_ceremony.jpg
   caption: XPRIZE Wildfire award ceremony with the DeepFire team, 2026
   width: 1280
