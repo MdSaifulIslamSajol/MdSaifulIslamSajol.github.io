@@ -2,7 +2,7 @@
 nav_section: blog
 layout: default
 permalink: /blog/
-title: blog
+title: Blog
 nav: true
 nav_order: 9
 pagination:

@@ -1,0 +1,20 @@
+{% comment %}
+  Photo gallery (site-specific include). Data: _data/gallery.yml.
+  Each photo's `column` (1, 2 or 3) places it in that column, top to bottom
+  in list order. On narrow screens the three columns stack into one.
+{% endcomment %}
+<div class="sx-gallery">
+  {% for c in (1..3) %}
+    <div class="sx-gallery-col">
+      {% for photo in site.data.gallery %}
+        {% assign pc = photo.column | default: 1 %}
+        {% if pc == c %}
+          <figure class="sx-photo">
+            <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
+            <figcaption>{{ photo.caption }}</figcaption>
+          </figure>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

@@ -2,7 +2,7 @@
 nav_section: experience
 layout: cv
 permalink: /cv/
-title: experience
+title: Experience
 nav: true
 nav_order: 2
 cv_format: rendercv # options: rendercv, jsonresume

@@ -1,13 +1,15 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 nav_section: about
-subtitle: AI and Machine Learning Researcher · Ph.D. Student in Computer Science and Engineering, Louisiana State University
+subtitle: AI and Machine Learning Researcher
 
 # Short role lines shown under the name in the hero.
 hero:
   role: Graduate Research Assistant, Department of Environmental Sciences
+  student: PhD Student, Department of Computer Science and Engineering
+  university: Louisiana State University
   advisor: Advisor, Dr. Supratik Mukhopadhyay
   location: Baton Rouge, Louisiana, USA
 

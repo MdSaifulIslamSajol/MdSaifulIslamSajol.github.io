@@ -28,6 +28,12 @@ layout: default
             {% if page.hero.role %}
               <li><i class="fa-solid fa-flask" aria-hidden="true"></i> {{ page.hero.role }}</li>
             {% endif %}
+            {% if page.hero.student %}
+              <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> {{ page.hero.student }}</li>
+            {% endif %}
+            {% if page.hero.university %}
+              <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i> {{ page.hero.university }}</li>
+            {% endif %}
             {% if page.hero.advisor %}
               <li><i class="fa-solid fa-user-graduate" aria-hidden="true"></i> {{ page.hero.advisor }}</li>
             {% endif %}
@@ -271,27 +277,7 @@ layout: default
       <header class="sx-section-head">
         <h2 id="photos-title" class="sx-title"><span class="sx-num">08</span> Photos</h2>
       </header>
-      <div class="sx-gallery">
-        {% for photo in site.data.gallery %}
-          {% unless photo.last_row %}
-            <figure class="sx-photo">
-              <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
-              <figcaption>{{ photo.caption }}</figcaption>
-            </figure>
-          {% endunless %}
-        {% endfor %}
-      </div>
-      {% assign last_photos = site.data.gallery | where: 'last_row', true %}
-      {% if last_photos.size > 0 %}
-        <div class="sx-gallery-last">
-          {% for photo in last_photos %}
-            <figure class="sx-photo">
-              <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
-              <figcaption>{{ photo.caption }}</figcaption>
-            </figure>
-          {% endfor %}
-        </div>
-      {% endif %}
+      {% include sx_gallery.liquid %}
     </section>
   {% endif %}
 
@@ -324,10 +310,21 @@ layout: default
     </section>
   {% endif %}
 
+  <!-- ============================== CERTIFICATIONS ============================== -->
+  {% if site.data.certifications %}
+    <section id="certifications" class="sx-section" aria-labelledby="certifications-title">
+      <header class="sx-section-head">
+        <h2 id="certifications-title" class="sx-title"><span class="sx-num">10</span> Licenses &amp; certifications</h2>
+        <a class="sx-more" href="{{ '/certifications/' | relative_url }}">certifications page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </header>
+      {% include sx_certifications.liquid %}
+    </section>
+  {% endif %}
+
   <!-- ============================== CONTACT ============================== -->
   <section id="contact" class="sx-section sx-contact" aria-labelledby="contact-title">
     <header class="sx-section-head">
-      <h2 id="contact-title" class="sx-title"><span class="sx-num">10</span> Contact</h2>
+      <h2 id="contact-title" class="sx-title"><span class="sx-num">11</span> Contact</h2>
     </header>
     <p class="sx-lead">{{ site.contact_note }}</p>
     <div class="sx-contact-grid">

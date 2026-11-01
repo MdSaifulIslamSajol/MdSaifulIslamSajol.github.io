@@ -1,0 +1,24 @@
+{% comment %}
+  Licenses and certifications (site-specific include, not part of al-folio).
+  Data: _data/certifications.yml. Used on the home page and on /certifications/.
+{% endcomment %}
+{% assign cdata = site.data.certifications %}
+{% if cdata.intro %}<p class="sx-lead">{{ cdata.intro }}</p>{% endif %}
+<div class="sx-certs">
+  {% for c in cdata.items %}
+    <article class="sx-cert">
+      <div class="sx-vol-icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
+      <div class="sx-vol-body">
+        <span class="sx-award-date">Issued {{ c.issued }}</span>
+        <h3 class="sx-award-title">{{ c.name }}</h3>
+        <p class="sx-award-org">{{ c.issuer }}{% if c.provider %} · {{ c.provider }}{% endif %}</p>
+        <p class="sx-cert-id">Credential ID {{ c.credential_id }}</p>
+        {% if c.url %}
+          <p class="sx-award-links">
+            <a href="{{ c.url }}" target="_blank" rel="noopener">Show credential <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

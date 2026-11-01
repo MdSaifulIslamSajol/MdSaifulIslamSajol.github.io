@@ -1,0 +1,60 @@
+# Licenses and certifications (home page section and /certifications/).
+# url: the Coursera credential page (checked; each shows the certificate).
+intro: >-
+  My deep learning and AI journey started in 2019, during my M.Sc. studies at
+  South Westphalia University of Applied Sciences (Fachhochschule Südwestfalen), Germany.
+items:
+  - name: "Data Visualization with Tableau Specialization"
+    issuer: Coursera
+    provider: "University of California, Davis"
+    issued: Apr 2020
+    credential_id: N68XGZNDT4Q4
+    url: https://www.coursera.org/account/accomplishments/specialization/N68XGZNDT4Q4
+  - name: "Analyzing Big Data with SQL"
+    issuer: Coursera Course Certificates
+    provider: "Cloudera"
+    issued: Feb 2020
+    credential_id: ST8CHN6LGHXE
+    url: https://www.coursera.org/account/accomplishments/verify/ST8CHN6LGHXE
+  - name: "TensorFlow in Practice Specialization"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Feb 2020
+    credential_id: 9NLFLC3WATK2
+    url: https://www.coursera.org/account/accomplishments/specialization/9NLFLC3WATK2
+  - name: "Deep Learning Specialization"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Jan 2020
+    credential_id: GB7LCCQ28LLA
+    url: https://www.coursera.org/account/accomplishments/specialization/GB7LCCQ28LLA
+  - name: "Convolutional Neural Networks"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Jan 2020
+    credential_id: WKBLZCBRLZ9A
+    url: https://www.coursera.org/account/accomplishments/verify/WKBLZCBRLZ9A
+  - name: "Sequence Models"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Jan 2020
+    credential_id: APZCF75WSK22
+    url: https://www.coursera.org/account/accomplishments/verify/APZCF75WSK22
+  - name: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Dec 2019
+    credential_id: 2QU8T5GBETKF
+    url: https://www.coursera.org/account/accomplishments/verify/2QU8T5GBETKF
+  - name: "Neural Networks and Deep Learning"
+    issuer: Coursera
+    provider: "DeepLearning.AI"
+    issued: Dec 2019
+    credential_id: SXSTGAXAURRL
+    url: https://www.coursera.org/account/accomplishments/verify/SXSTGAXAURRL
+  - name: "IBM Data Science Specialization"
+    issuer: Coursera
+    provider: "IBM"
+    issued: Dec 2019
+    credential_id: T92NSMWR93B7
+    url: https://www.coursera.org/account/accomplishments/specialization/T92NSMWR93B7

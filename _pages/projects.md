@@ -1,7 +1,7 @@
 ---
 nav_section: projects
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Research projects in biology and drug discovery, reliable AI, environment and energy, and applied AI.
 nav: true

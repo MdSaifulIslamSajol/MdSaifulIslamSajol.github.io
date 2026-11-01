@@ -1,6 +1,6 @@
 ---
 layout: page
-title: photos
+title: Photos
 permalink: /photos/
 nav: true
 nav_order: 8
@@ -10,24 +10,4 @@ description: Photos from award ceremonies, commencement, and research teams.
 
 <link rel="stylesheet" href="{{ '/assets/custom/sections.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
-<div class="sx-gallery">
-  {% for photo in site.data.gallery %}
-    {% unless photo.last_row %}
-      <figure class="sx-photo">
-        <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
-        <figcaption>{{ photo.caption }}</figcaption>
-      </figure>
-    {% endunless %}
-  {% endfor %}
-</div>
-{% assign last_photos = site.data.gallery | where: 'last_row', true %}
-{% if last_photos.size > 0 %}
-  <div class="sx-gallery-last">
-    {% for photo in last_photos %}
-      <figure class="sx-photo">
-        <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" data-zoomable>
-        <figcaption>{{ photo.caption }}</figcaption>
-      </figure>
-    {% endfor %}
-  </div>
-{% endif %}
+{% include sx_gallery.liquid %}

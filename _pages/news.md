@@ -4,7 +4,7 @@ nav_section: news
 nav_order: 1
 nav: true
 layout: page
-title: news
+title: News
 permalink: /news/
 ---
 
